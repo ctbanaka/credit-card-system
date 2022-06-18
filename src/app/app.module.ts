@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddRegistrtionComponent } from './add-registrtion/add-registrtion.component';
-import { WelcomeComponent } from './welcome/welcome-component.component';
-import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome-component';
 
 @NgModule({
   declarations: [
