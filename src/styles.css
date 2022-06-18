@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap');
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
 div.card-header {
     font-size: large;
    }
