@@ -4,13 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddRegistrtionComponent } from './add-registrtion/add-registrtion.component';
-import { WelcomeComponentComponent } from './welcome-component/welcome-component.component';
+import { WelcomeComponent } from './welcome/welcome-component.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddRegistrtionComponent,
-    WelcomeComponentComponent
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
