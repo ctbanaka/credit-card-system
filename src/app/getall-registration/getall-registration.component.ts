@@ -18,6 +18,7 @@ export class GetallRegistrationComponent implements OnInit {
    this.service.userRegistration()
    .subscribe(data=>{this.registration=data.result});
    
+   
   }
   
 }
