@@ -8,6 +8,14 @@ import { WelcomeComponent } from './welcome/welcome-component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GetallRegistrationComponent } from './getall-registration/getall-registration.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddAddressComponent } from './add-address/add-address.component';
+import { ViewAllAddressComponent } from './view-all-address/view-all-address.component';
+
+import { DeleteAddressByIdComponent } from './delete-address-by-id/delete-address-by-id.component';
+import { UpdateAddressComponent } from './update-address/update-address.component';
+
+import { GetallAddressComponent } from './getall-address/getall-address.component';
+
 
 
 @NgModule({
@@ -15,7 +23,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     AddRegistrtionComponent,
     WelcomeComponent,
-    GetallRegistrationComponent
+    GetallRegistrationComponent,
+    AddAddressComponent,
+    ViewAllAddressComponent,
+    DeleteAddressByIdComponent,
+    UpdateAddressComponent,
+    GetallAddressComponent,
+  
   ],
   imports: [
     BrowserModule,
