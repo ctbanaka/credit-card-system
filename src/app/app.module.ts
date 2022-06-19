@@ -8,6 +8,8 @@ import { WelcomeComponent } from './welcome/welcome-component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GetallRegistrationComponent } from './getall-registration/getall-registration.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
+import { CreditcardComponent } from './creditcard/creditcard.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     AddRegistrtionComponent,
     WelcomeComponent,
-    GetallRegistrationComponent
+    GetallRegistrationComponent,
+    AdminComponent,
+    CreditcardComponent
   ],
   imports: [
     BrowserModule,
