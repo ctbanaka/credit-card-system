@@ -6,18 +6,25 @@ import { AppComponent } from './app.component';
 import { AddRegistrtionComponent } from './add-registrtion/add-registrtion.component';
 import { WelcomeComponent } from './welcome/welcome-component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GetallRegistrationComponent } from './getall-registration/getall-registration.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddRegistrtionComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    GetallRegistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
