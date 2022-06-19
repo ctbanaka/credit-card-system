@@ -9,7 +9,7 @@ export class RegistrationService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = 'http://localhost:8484/register/' ;
+  baseUrl: string = 'http://localhost:8484/credit-card/register/' ;
 
   userRegistration(): Observable<any>{
     return this.http.get<any>(this.baseUrl);
