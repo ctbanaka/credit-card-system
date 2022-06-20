@@ -16,7 +16,8 @@ export class GetallRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
    this.service.getUserRegistration()
-   .subscribe(data=>{this.registration=data});
+   .subscribe(data=>{this.registration=data;
+              console.log(data)});
    
    
   }
