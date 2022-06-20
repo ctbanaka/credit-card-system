@@ -1,7 +1,7 @@
 
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreditcardListComponent } from './creditcard-list/creditcard-list.component';
+
 
 import { GetallRegistrationComponent } from './getall-registration/getall-registration.component';
 import { CreditCard } from './model/creditcard';
@@ -16,7 +16,7 @@ const routes: Routes = [
   {path : 'admin',component:AdminComponent,
   children:[{
        path:'getall-registration',component:GetallRegistrationComponent},
-       {path:'CreditCard',component:CreditcardListComponent},]},
+    ]},
  
 
 

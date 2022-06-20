@@ -17,7 +17,7 @@ import { UpdateAddressComponent } from './update-address/update-address.componen
 import { GetallAddressComponent } from './getall-address/getall-address.component';
 import { AdminComponent } from './admin/admin.component';
 import { CreditcardComponent } from './creditcard/creditcard.component';
-import { CreditcardListComponent } from './creditcard-list/creditcard-list.component';
+import { GetCreditcardComponent } from './get-creditcard/get-creditcard.component';
 
 
 
@@ -34,7 +34,7 @@ import { CreditcardListComponent } from './creditcard-list/creditcard-list.compo
     GetallAddressComponent,
     AdminComponent,
     CreditcardComponent,
-    CreditcardListComponent
+    GetCreditcardComponent
     
   
   ],

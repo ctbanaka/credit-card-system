@@ -1,0 +1,31 @@
+<div class="col-md-6 user-container">
+    <h2 style="margin: auto"> CreditCatd Details</h2>
+    <!-- <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button> -->
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>UserId</th>
+        <th>CardNumber</th>
+        <th>CardType</th>
+        <th>ExpiryDate</th>
+        <th>cvv</th>
+        
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cdr of creditcard">
+        <td>{{cdr.userId}}</td>
+        <td>{{cdr.cardNo}}</td>
+        <td>{{cdr.cardType}}</td>
+        <td>{{cdr.expiryDate}}</td>
+        <td>{{cdr.cvv}}</td>
+        <td><button (click)="DeleteCreditCard(creditcard.userId)" class="btn btn-danger">Delete</button>
+    
+            <button (click)="CreditCardDetails(creditcard.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  

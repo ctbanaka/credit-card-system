@@ -1,9 +1,9 @@
 export class CreditCard{
-    id!: number;
-    cardnumber!:number;
-    expirydate!:number;
+    userId!: number;
+    cardNo!:number;
+    expiryDate!:number;
     cvv!:number;
-    cardtype!:string;
+    cardType!:string;
 
     
 }

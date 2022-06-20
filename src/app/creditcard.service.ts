@@ -1,29 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { CreditCard } from './model/creditcard';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CreditcardService {
-  private baseUrl = 'http://localhost:8484/credit-card/swagger-ui.html#/admin45controller';
+  private baseUrl = 'http://localhost:8484/credit-card/admin';
 
   constructor(private http: HttpClient) { }
 
-  getCreditCard(id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+  getCreditCard(): Observable<any>{
+    return this.http.get<any>(this.baseUrl);
   }
 
-  createCreditCard(employee: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, employee);
+  createCreditCard(creditcard: CreditCard): Observable<any> {
+    return this.http.post(`${this.baseUrl}`, creditcard);
   }
 
-  deleteCreditCard(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
-  }
-
-  getCreditCardList(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
-  }
+  
 }
 
