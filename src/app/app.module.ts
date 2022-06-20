@@ -10,6 +10,7 @@ import { GetallRegistrationComponent } from './getall-registration/getall-regist
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { CreditcardComponent } from './creditcard/creditcard.component';
+import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CreditcardComponent } from './creditcard/creditcard.component';
     WelcomeComponent,
     GetallRegistrationComponent,
     AdminComponent,
-    CreditcardComponent
+    CreditcardComponent,
+    AddTransactionComponent
   ],
   imports: [
     BrowserModule,

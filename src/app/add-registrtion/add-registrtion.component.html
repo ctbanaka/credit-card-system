@@ -1,2 +1,45 @@
 
+<div class="form">
+    <div class="form-toggle"></div>
+    <div class="form-panel two">
+      <div class="form-header">
+        <h1>Register Account</h1>
+      </div>
+      <div class="form-content">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" name="firstName" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" name="lastName" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="dateofbirth">Date of Birth</label>
+            <input id="dateofbirth" type="date" name="dateofbirth" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="phoneno">Phone Number</label>
+            <input id="phoneno" type="tel" name="phoneno" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required="required"/>
+          </div>
+          <!-- <div class="form-group">
+            <input id="userId" type="hidden" name="userId"/>
+          </div> -->
+          <div class="form-group">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="pen-footer"><a href="https://www.behance.net/gallery/30478397/Login-Form-UI-Library" target="_blank"><i class="material-icons">arrow_backward</i>View on Behance</a><a href="https://github.com/andyhqtran/UI-Library/tree/master/Login%20Form" target="_blank">View on Github<i class="material-icons">arrow_forward</i></a></div>
     
