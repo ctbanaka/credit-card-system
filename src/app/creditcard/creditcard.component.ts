@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CreditcardService } from '../creditcard.service';
 import { CreditCard } from '../model/creditcard';
 import { Router } from '@angular/router';
@@ -10,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./creditcard.component.css']
 })
 export class CreditcardComponent implements OnInit {
-
   creditcard: CreditCard = new CreditCard();
   submitted = false;
 
-  constructor(private creditcardsevice: CreditcardService,
+  constructor(private creditcardservice: CreditcardService,
     private router: Router) { }
 
   ngOnInit() {
@@ -26,7 +24,7 @@ export class CreditcardComponent implements OnInit {
   }
 
   save() {
-    this.creditcardsevice
+    this.creditcardservice
     .createCreditCard(this.creditcard).subscribe(data => {
       console.log(data)
       this.creditcard = new CreditCard();
@@ -41,6 +39,7 @@ export class CreditcardComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/creditcard']);
+    this.router.navigate(['/CreditCard']);
   }
 }
+
