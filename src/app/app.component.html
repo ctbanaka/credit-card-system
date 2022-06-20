@@ -7,9 +7,11 @@
       <li><a class='nav-link' routerLinkActive='active' routerLink='/welcome'  >Home</a></li>
       <li><a class='nav-link' routerLinkActive='active' routerLink='/login'  >Login</a></li>
       <li><a class='nav-link' routerLinkActive='active' routerLink='/registration' >Registration</a></li>
+       <li> <a [routerLink]="['admin']" [routerLinkActive]="['active']" style="margin-left: 87pxo">Admin Login</a></li>
     </ul>
 </nav>
 <div class='container'>
   <router-outlet></router-outlet>
-   <app-getall-registration></app-getall-registration> <!--this should be removed -->
+  
 </div>
+
