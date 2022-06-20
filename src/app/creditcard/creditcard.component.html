@@ -1,19 +1,19 @@
-<h3>Create Employee</h3>
+<h3>Saaogn CreditCard</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="id">Id</label>
-      <input type="number" class="form-control" id="id" required [(ngModel)]="creditcard.id" name="id">
+      <input type="text" class="form-control" id="id" required [(ngModel)]="creditcard.id" name="id">
     </div>
 
     <div class="form-group">
       <label for="cardnumber">Card Number</label>
-      <input type="number" class="form-control" id="cardnumbere" required [(ngModel)]="creditcard.cardnumber" name="cardnumber">
+      <input type="text" class="form-control" id="cardnumbere" required [(ngModel)]="creditcard.cardnumber" name="cardnumber">
     </div>
 
     <div class="form-group">
       <label for="cvv">Cvv</label>
-      <input type="number" class="form-control" id="cvv" required [(ngModel)]="creditcard.cvv" name="cvv">
+      <input type="text" class="form-control" id="cvv" required [(ngModel)]="creditcard.cvv" name="cvv">
     </div>
     <div class="form-group">
         <label for="expirtdate">Expiry Date</label>
