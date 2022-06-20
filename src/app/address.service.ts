@@ -14,4 +14,7 @@ export class AddressService {
   getAllAddress(): Observable<any>{
     return this.http.get<any>(this.baseUrl);
   }
+  putAddress(): Observable<any>{
+    return this.http.get<any>(this.baseUrl);
+  }
 }
