@@ -15,7 +15,9 @@ export class GetallAddressComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAllAddress()
-    .subscribe(data=>{this.address=data.result});
+    .subscribe(data=>{this.address=data;
+         console.log(data)       
+    });
   }
 
 }
