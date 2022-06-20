@@ -9,31 +9,28 @@
         <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input id="firstName" type="text" name="firstName" required="required"/>
+            <input id="firstName" type="text" formControlName="firstName" name="firstName" required="required"/>
           </div>
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input id="lastName" type="text" name="lastName" required="required"/>
+            <input id="lastName" type="text" formControlName="lastName" name="lastName" required="required"/>
           </div>
           <div class="form-group">
-            <label for="dateofbirth">Date of Birth</label>
-            <input id="dateofbirth" type="date" name="dateofbirth" required="required"/>
+            <label for="dateOfBirth">Date of Birth</label>
+            <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" required="required"/>
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input id="email" type="email" name="email" required="required"/>
+            <input id="email" type="email" formControlName="email" name="email" required="required"/>
           </div>
           <div class="form-group">
-            <label for="phoneno">Phone Number</label>
-            <input id="phoneno" type="tel" name="phoneno" required="required"/>
+            <label for="phoneNo">Phone Number</label>
+            <input id="phoneNo" type="tel" formControlName="phoneNo" name="phoneNo" required="required"/>
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input id="password" type="password" name="password" required="required"/>
+            <input id="password" type="password" formControlName="password" name="password" required="required"/>
           </div>
-          <!-- <div class="form-group">
-            <input id="userId" type="hidden" name="userId"/>
-          </div> -->
           <div class="form-group">
             <button type="submit">Register</button>
           </div>

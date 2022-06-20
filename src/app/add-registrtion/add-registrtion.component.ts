@@ -38,7 +38,9 @@ export class AddRegistrtionComponent implements OnInit {
 }
 
 userRegistration(){
+  console.log(this.registrationForm.value);
   this.registrationService.userRegistration(this.registrationForm.value)
+
   .subscribe(data =>{console.log(data);
     this.router.navigate(['welcome']);
   })
