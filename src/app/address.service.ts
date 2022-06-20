@@ -9,7 +9,7 @@ export class AddressService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = 'http://localhost:8484/address/';
+  baseUrl: string = 'http://localhost:8484/credit-card/address/';
 
   getAllAddress(): Observable<any>{
     return this.http.get<any>(this.baseUrl);
