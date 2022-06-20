@@ -1,56 +1,42 @@
-<form >
-    <div>
-      
-         <label for="cardnumber">Card Number</label>
-         <input type="number" id="cardnumber" name="cardnumber" formControlName="cardnumber">
-        <div *ngIf="!cardnumber?.valid && (cardnumber?.dirty || cardnumber?.touched)">
-           <div [hidden]="!cardnumber?.errors?.['required']">
-               pleace Enter Valied Card Number..
-           </div>
-       </div>
-     </div>
-     <br>
-       <div>
-         <label for="expirydate">Expiry Date</label>
-         <input type="date" id="expirydate" name="expirydate" formControlName="expirydate">
-         <div *ngIf="!expirydate?.valid && (expirydate?.dirty || expirydate?.touched)">
-            <div [hidden]="!expirydate?.errors?.['required']">
-                pleace Enter Date...
-            </div>
-        </div>
-     </div>
-      <br>
-   <div>
-         <label for="cvv">Cvv</label>
-         <input type="number" id="cvv" name="cvv" formControlName="cvv">
-      
-       <div *ngIf="!cvv?.valid && (cvv?.dirty || cvv?.touched)">
-           <div [hidden]="!cvv?.errors?.['required']">
-              Enter Valied Cvv..
-           </div>
-      
-           <div [hidden]="!cvv?.errors?.['cvv']">
-            Enter Valied Cvv..
-            </div>
-       </div>
+<h3>Create CreditCard</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="number" class="form-control" id="id" required [(ngModel)]="creditcard.id" name="id">
     </div>
-       <br>
-       <div>
-         <label for="cardtype">Card Type </label>
-         <input type="radio" value="vissa" id="cardtype" name="cardtype" formControlName="cardtype"> Vissa
-         <input type="radio" value="master" id="cardtype" name="cardtype" formControlName="cardtype"> Master
-         
-         <div [hidden]="!cardtype?.errors?.['required']">
-         </div>
-     <div [hidden]="!cardtype?.errors?.['email']">
-             Please Select Card Type..
-          </div>
-       </div>
-       <br><br>
-      {{creditcardForm.valid}}
-       <p>
-         <button [disabled]="!creditcardForm.valid">Submit</button>
-       </p>
-      
-     </form>
+
+    <div class="form-group">
+      <label for="cardnumber">Card Number</label>
+      <input type="text" class="form-control" id="cardnumber" required [(ngModel)]="creditcard.cardnumber" name="cardnumber">
+    </div>
+
+    <div class="form-group">
+      <label for="expirydate">Expiry Date</label>
+     <inpu type="date" class="form-control" id="expirydate" required [(ngModel)]="creditcard.expirydate" name="expirydate"></inpu>
+    </div>
+    <div class="form-group">
+      <label for="cardtype">Card type</label>
+      <input type="radio" value="vissa" id="cardtype" required [(ngModel)]="creditcard.cardtype" name="cardtype"> Vissa
+      <input type="radio" value="master" id="cardtype" required [(ngModel)]="creditcard.cardtype" name="cardtype" > Master
+      <input type="radio" value="rupay" id="cardtype" required [(ngModel)]="creditcard.cardtype" name="cardtype" > Rupay
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button><h3>Create CreditCard</h3>-->
+<div [hidden]="submitted" style="width: 400px;">
+   <form (ngSubmit)="onSubmit()">
+     
+   </form>
+</div>
+</div>
+
+   <router-outlet></router-outlet> 
+ 
+    
    
