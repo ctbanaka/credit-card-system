@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminComponent } from './admin.component';
+import { ViewAllAddressComponent } from './view-all-address.component';
 
-describe('AdminComponent', () => {
-  let component: AdminComponent;
-  let fixture: ComponentFixture<AdminComponent>;
+describe('ViewAllAddressComponent', () => {
+  let component: ViewAllAddressComponent;
+  let fixture: ComponentFixture<ViewAllAddressComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminComponent ]
+      declarations: [ ViewAllAddressComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdminComponent);
+    fixture = TestBed.createComponent(ViewAllAddressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
