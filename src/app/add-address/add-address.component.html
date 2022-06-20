@@ -1,0 +1,38 @@
+<h1> Address Form</h1>
+<form>
+
+    <div>
+        <label for="city"> City</label>
+        <input type="text" id="city" name="city" placeholder="City..." formControlName="city">
+        <div *ngIf="!city?.valid && (city?.dirty || city?. touched)">
+            <div [hidden]="!city?.errors?.['required']">
+                City is required....!
+            </div>
+        </div> 
+    </div>
+    <br>
+    <div>
+        <label for="state"> State</label>
+        <input type="text" id="state" name="state" placeholder="State..."  formControlName="state">
+       
+        <div *ngIf="!state?.valid && (state?.dirty || state?.touched)">
+           <div [hidden]="!state?.errors?.['required']">
+            State is required....!
+        </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="pincode"> Pincode</label>
+        <input type="number" id="pincode" name="pincode" formControlName="pincode">
+        <div *ngIf="!pincode?.valid && (pincode?.dirty || pincode?.touched)">
+            <div [hidden]="!pincode?.errors?.['required']">
+                Pincode is required...!
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+

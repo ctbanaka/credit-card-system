@@ -5,13 +5,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RegistrationService {
+export class AddressService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl: string = 'http://localhost:8484/register/' ;
+  baseUrl: string = 'http://localhost:8484/address/';
 
-  userRegistration(): Observable<any>{
+  getAllAddress(): Observable<any>{
+    return this.http.get<any>(this.baseUrl);
+  }
+  putAddress(): Observable<any>{
     return this.http.get<any>(this.baseUrl);
   }
 }
