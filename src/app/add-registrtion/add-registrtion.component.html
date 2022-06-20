@@ -1,66 +1,45 @@
 
-    <h1 >Registration Form</h1>
-    <form >
-       
-      <div>
-          <label for="firstname">First Name </label>
-            <input type="text" id="firstname" name="firstname" placeholder="First Name.." formControlName="firstname">
-           <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
-              <div [hidden]="!firstname?.errors?.['required']">
-                  First name is required...!
-              </div>
+<div class="form">
+    <div class="form-toggle"></div>
+    <div class="form-panel two">
+      <div class="form-header">
+        <h1>Register Account</h1>
+      </div>
+      <div class="form-content">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" name="firstName" required="required"/>
           </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" name="lastName" required="required"/>
           </div>
-         <br>
-           <div>
-            <label for="lastname">Last Name </label>
-            <input type="text" id="lastname" name="lastname" placeholder="Last Name.." formControlName="lastname">
-         
-            <div *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)">
-              <div [hidden]="!lastname?.errors?.['required']">
-                  Last name is required...!
-              </div>
-           </div>
-         </div>
-         <br>
-         <div>
-          <label for="dateofbirth">Date Of Birth</label>
-          <input type="date" id="dateofbirth" name="dateofbirth" formControlName="dateofbirth">
-          <div *ngIf="!dateofbirth?.valid && (dateofbirth?.dirty || dateofbirth?.touched)">
-            <div [hidden]="!dateofbirth?.errors?.['required']">
-                Date Of Birth is required...!
-            </div>
-         </div>
-         </div>
-         <br>
-         <div>
-          <label for="phonenumber">Phone Number</label>
-          <input type="phonenumber" id="phonenumber" name="phonenumber" placeholder="phone Number..." formControlName="phonenumber">
-          <div *ngIf="!phonenumber?.valid && (phonenumber?.dirty || phonenumber?.touched)">
-            <div [hidden]="!phonenumber?.errors?.['required']">
-                phone Number is required...!
-            </div>
-         </div>
-         </div>
-         <br>
-      <div>
-            <label for="email">Email </label>
-            <input type="text" id="email" name="email" placeholder="Email..." formControlName="email">
-         
-          <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
-              <div [hidden]="!email?.errors?.['required']">
-                 Email is required...!
-              </div>
-             
-              <div [hidden]="!email?.errors?.['email']">
-                 <h4 style="color:blue ;"> Please enter a valid email id...!</h4>
-               </div>
-         
-        
-          <br><br>
-         {{addregistrationForm.valid}}
-          <p>
-            <button [disabled]="!addregistrationForm.valid">Submit</button>
-          </p>
-      
-         
+          <div class="form-group">
+            <label for="dateofbirth">Date of Birth</label>
+            <input id="dateofbirth" type="date" name="dateofbirth" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="phoneno">Phone Number</label>
+            <input id="phoneno" type="tel" name="phoneno" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required="required"/>
+          </div>
+          <!-- <div class="form-group">
+            <input id="userId" type="hidden" name="userId"/>
+          </div> -->
+          <div class="form-group">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="pen-footer"><a href="https://www.behance.net/gallery/30478397/Login-Form-UI-Library" target="_blank"><i class="material-icons">arrow_backward</i>View on Behance</a><a href="https://github.com/andyhqtran/UI-Library/tree/master/Login%20Form" target="_blank">View on Github<i class="material-icons">arrow_forward</i></a></div>
+    

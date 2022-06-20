@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Registration } from './model/registration';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,13 @@ export class RegistrationService {
 
   baseUrl: string = 'http://localhost:8484/register/' ;
 
-  userRegistration(): Observable<any>{
+  getUserRegistration(): Observable<any>{
     return this.http.get<any>(this.baseUrl);
   }
+  
+  userRegistration(register:Registration): Observable<any>{
+    return this.http.post<any>(this.baseUrl, register);
+
+  }
+
 }

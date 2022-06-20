@@ -15,8 +15,8 @@ export class GetallRegistrationComponent implements OnInit {
   constructor(private service: RegistrationService) { }
 
   ngOnInit(): void {
-   this.service.userRegistration()
-   .subscribe(data=>{this.registration=data.result});
+   this.service.getUserRegistration()
+   .subscribe(data=>{this.registration=data});
    
    
   }
