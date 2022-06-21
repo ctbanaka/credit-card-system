@@ -12,13 +12,15 @@ import { AdminComponent } from './admin/admin.component';
 import { AddRegistrtionComponent } from './add-registrtion/add-registrtion.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AddAddressComponent } from './add-address/add-address.component';
+import { AddressComponent } from './address/address.component';
 
 const routes: Routes = [
   {path: 'welcome', component:WelcomeComponent},
   { path: ' ',redirectTo: 'welcome',pathMatch:'full'},
   {path : 'admin',component:AdminComponent},
   {path:'registration', component:RegistrationComponent},
-  {path:'address',component:AddAddressComponent},
+  {path:'addaddress',component:AddAddressComponent},
+  {path:'address',component:AddressComponent},
   {path: 'register', component:AddRegistrtionComponent},
   {path:'getalladdress' , component:GetallAddressComponent},
   { path: '**',redirectTo: 'welcome',pathMatch:'full'},
