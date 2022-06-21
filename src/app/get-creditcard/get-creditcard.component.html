@@ -14,13 +14,14 @@
     </thead>
     <tbody>
     <tr *ngFor="let cdr of creditcard">
-      <td>{{cdr.userId}}</td>
+     
       <td>{{cdr.cardNo}}</td>
       <td>{{cdr.cardType}}</td>
       <td>{{cdr.expiryDate}}</td>
       <td>{{cdr.cvv}}</td>
-      <td><button (click)="deleteCreditCard(creditcard)" class="btn btn-info" style="margin-left: 10px">Delete</button></td>
-
+      <td><button (click)="deleteCreditCard(creditcard)" class="btn btn-info" style="margin-left: 10px">Delete</button><br>
+          <button (click)="createCreditCard()"class="btn btn-info" style="margin-left:10px">Create</button></td>
+      
     </tr>
     </tbody>
   </table>

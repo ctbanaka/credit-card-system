@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CreditcardService } from '../creditcard.service';
 import { CreditCard } from '../model/creditcard';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-get-creditcard',
@@ -9,6 +10,7 @@ import { CreditCard } from '../model/creditcard';
 })
 export class GetCreditcardComponent implements OnInit {
   creditcard!:CreditCard[];
+  router: any;
 
   constructor(private service: CreditcardService) { }
 
@@ -25,7 +27,8 @@ export class GetCreditcardComponent implements OnInit {
           console.log(data)});
          
   }
-  reloadData(): void {
-    throw new Error('Method not implemented.');
-  }
+  
+  createCreditCard(): void{
+       this.router.navigate(['creditcard']);
+  };
   }

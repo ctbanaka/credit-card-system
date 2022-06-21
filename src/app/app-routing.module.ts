@@ -16,12 +16,15 @@ import { AddressComponent } from './address/address.component';
 import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { GetCreditcardComponent } from './get-creditcard/get-creditcard.component';
+import { CreditCard } from './model/creditcard';
+import { CreditcardComponent } from './creditcard/creditcard.component';
 
 const routes: Routes = [
   {path: 'welcome', component:WelcomeComponent},
   {path:'admin', component:AdminComponent,
         children:[{
              path:'getall-registran',component:GetallRegistrationComponent}]},
+  {path:'creditcard',component:CreditcardComponent},
   {path:'registration', component:RegistrationComponent},
   {path:'getallreigistration', component:GetallRegistrationComponent},
   {path:'getcreditcard',component:GetCreditcardComponent},
