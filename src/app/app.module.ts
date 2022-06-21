@@ -21,6 +21,7 @@ import { GetCreditcardComponent } from './get-creditcard/get-creditcard.componen
 import { RegistrationComponent } from './registration/registration.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { AddressComponent } from './address/address.component';
+import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 
 
 
@@ -40,8 +41,8 @@ import { AddressComponent } from './address/address.component';
     GetCreditcardComponent,
     RegistrationComponent,
     TransactionComponent,
-    AddressComponent
-    
+    AddressComponent,
+    AddTransactionComponent
   
   ],
   imports: [
