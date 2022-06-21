@@ -11,7 +11,7 @@ export class RegistrationService {
   constructor(private http: HttpClient) { }
 
   baseUrl: string = 'http://localhost:8484/credit-card/register/' ;
-                    //  http://localhost:8484/credit-card/register
+
 
 
   getUserRegistration(): Observable<any>{
