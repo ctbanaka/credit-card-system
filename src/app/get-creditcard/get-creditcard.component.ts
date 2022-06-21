@@ -15,7 +15,7 @@ export class GetCreditcardComponent implements OnInit {
   constructor(private service: CreditcardService) { }
 
   ngOnInit(): void {
-   this.service.getCreditCard()
+    this.service.getCreditCard()
    .subscribe(data=>{this.creditcard=data;
               console.log(data)});
    
@@ -28,7 +28,5 @@ export class GetCreditcardComponent implements OnInit {
          
   }
   
-  createCreditCard(): void{
-       this.router.navigate(['creditcard']);
-  };
+  
   }

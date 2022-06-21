@@ -21,9 +21,7 @@ import { CreditcardComponent } from './creditcard/creditcard.component';
 
 const routes: Routes = [
   {path: 'welcome', component:WelcomeComponent},
-  {path:'admin', component:AdminComponent,
-        children:[{
-             path:'getall-registran',component:GetallRegistrationComponent}]},
+  {path:'admin', component:AdminComponent},
   {path:'creditcard',component:CreditcardComponent},
   {path:'registration', component:RegistrationComponent},
   {path:'getallreigistration', component:GetallRegistrationComponent},
