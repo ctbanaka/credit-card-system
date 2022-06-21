@@ -19,7 +19,13 @@ export class GetCreditcardComponent implements OnInit {
    
    
   }
- 
-  
-
-}
+  deleteCreditCard(cardNo: any) {
+    this.service.deleteCreditCard(cardNo)
+      .subscribe(data => {this.creditcard=data;
+          console.log(data)});
+         
+  }
+  reloadData(): void {
+    throw new Error('Method not implemented.');
+  }
+  }
