@@ -1,6 +1,9 @@
 <h1> Address Form</h1>
 <form>
-
+ <div>
+    <label for="userId"> UserId</label>
+    <input type="number" id="userId" name="userID" placeholder="userId..." formControlName="userId">
+ </div>
     <div>
         <label for="city"> City</label>
         <input type="text" id="city" name="city" placeholder="City..." formControlName="city">
@@ -23,14 +26,15 @@
     </div>
     <br>
     <div>
-        <label for="pincode"> Pincode</label>
-        <input type="number" id="pincode" name="pincode" formControlName="pincode">
-        <div *ngIf="!pincode?.valid && (pincode?.dirty || pincode?.touched)">
-            <div [hidden]="!pincode?.errors?.['required']">
+        <label for="pinCode"> Pincode</label>
+        <input type="number" id="pincode" name="pinCode" formControlName="pinCode">
+        <div *ngIf="!pinCode?.valid && (pinCode?.dirty || pinCode?.touched)">
+            <div [hidden]="!pinCode?.errors?.['required']">
                 Pincode is required...!
             </div>
         </div>
     </div>
+    <button type="submit">Submit</button>
 </form>
 
 
