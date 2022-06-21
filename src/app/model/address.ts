@@ -1,8 +1,7 @@
 export class Address {
-
-   addressId!:number;
+   userId!:number;
    city!: string;
    state!: string;
-   pincode!: number;
+   pinCode!: number;
 
 }

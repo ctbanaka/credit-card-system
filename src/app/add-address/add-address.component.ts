@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { RegistrationService } from '../registration.service';
+
+import { AddressService } from '../address.service';
+import { Address } from '../model/address';
+
 
 @Component({
   selector: 'app-add-address',
@@ -9,26 +13,44 @@ import { RegistrationService } from '../registration.service';
   styleUrls: ['./add-address.component.css']
 })
 export class AddAddressComponent implements OnInit {
-    addaddressForm = new FormGroup({
-      city: new FormControl('',[Validators.required]),
-      state: new FormControl('',[Validators.required]),
-      pincode: new FormControl('',[Validators.required]),
-
-    })
-    get city(){
-      return this.addaddressForm.get('city');
-    }
-    get state(){
-      return this.addaddressForm.get('state');
-    }
-    get pincode(){
-      return this.addaddressForm.get('pincod');
-    }
+    addressForm! : FormGroup;
+    address!: Address;
+    sub! :Subscription
+    
+   
 
   
-  constructor() { }
+  constructor(
+    private router: Router,
+    private  addressService: AddressService,
+  ) { }
 
   ngOnInit(): void {
+    this.addressForm = new FormGroup({
+      userId: new FormControl('',Validators.required),
+      city: new FormControl('',Validators.required),
+      state: new FormControl('',Validators.required),
+      pinCode: new FormControl('',Validators.required)
+    });
+  }
+
+  userAddress(){
+    console.log(this.addressForm.value);
+ this.addressService.userAddress(this.addressForm.value)
+  
+    .subscribe(data =>{console.log(data);
+      this.router.navigate(['welcome']);
+    })
+  
+  }
+  get city() {
+    return this.addressForm.get('city');
+  }
+  get state(){
+    return this.addressForm.get('state');
+  } 
+  get pinCode(){
+    return this.addressForm.get('pinCode');
   }
 
 }
