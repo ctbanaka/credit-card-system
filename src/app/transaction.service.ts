@@ -18,8 +18,8 @@ addTransaction(transaction:Transaction):Observable<any>{
   return this.http.post<any>(this.transactionUrl, transaction);
  }
 
-viewTransactionsByCardNo(cardNo:number):Observable<any>{
-   return this.http.get(this.transactionUrl+cardNo);
+viewTransactionsByCardNo(cardno:number):Observable<any>{
+   return this.http.get(this.transactionUrl+cardno);
 }
  
 }
