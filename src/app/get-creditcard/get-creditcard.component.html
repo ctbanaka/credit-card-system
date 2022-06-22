@@ -4,7 +4,7 @@
   <table class="table table-striped">
     <thead>
     <tr>
-      <th>UserId</th>
+      <th>userId</th>
       <th>CardNumber</th>
       <th>CardType</th>
       <th>ExpiryDate</th>
@@ -14,7 +14,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let cdr of creditcard">
-     
+     <td>{{cdr.userId}}</td>
       <td>{{cdr.cardNo}}</td>
       <td>{{cdr.cardType}}</td>
       <td>{{cdr.expiryDate}}</td>

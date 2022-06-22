@@ -23,6 +23,7 @@ const routes: Routes = [
   {path: 'welcome', component:WelcomeComponent},
   {path:'admin', component:AdminComponent},
   {path:'creditcard',component:CreditcardComponent},
+  {path:'getcreditcard',component:GetCreditcardComponent},
   {path:'registration', component:RegistrationComponent},
   {path:'getallreigistration', component:GetallRegistrationComponent},
   {path:'getcreditcard',component:GetCreditcardComponent},
