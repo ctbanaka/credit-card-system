@@ -1,28 +1,28 @@
 <div class="col-md-6 user-container">
-    <h2 style="margin: auto"> CreditCatd Details</h2>
-    <!-- <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button> -->
-    <table class="table table-striped">
-      <thead>
-      <tr>
-        <th>UserId</th>
-        <th>CardNumber</th>
-        <th>CardType</th>
-        <th>ExpiryDate</th>
-        <th>cvv</th>
-        
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let cdr of creditcard">
-        <td>{{cdr.userId}}</td>
-        <td>{{cdr.cardNo}}</td>
-        <td>{{cdr.cardType}}</td>
-        <td>{{cdr.expiryDate}}</td>
-        <td>{{cdr.cvv}}</td>
-       
-
-      </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <h2 style="margin: auto"> CreditCatd Details</h2>
+  <!-- <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button> -->
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>userId</th>
+      <th>CardNumber</th>
+      <th>CardType</th>
+      <th>ExpiryDate</th>
+      <th>cvv</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cdr of creditcard">
+     <td>{{cdr.userId}}</td>
+      <td>{{cdr.cardNo}}</td>
+      <td>{{cdr.cardType}}</td>
+      <td>{{cdr.expiryDate}}</td>
+      <td>{{cdr.cvv}}</td>
+      <td><button (click)="deleteCreditCard(creditcard)" class="btn btn-info" style="margin-left: 10px">Delete</button><br>
+          
+      
+    </tr>
+    </tbody>
+  </table>
+</div>

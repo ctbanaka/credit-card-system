@@ -22,7 +22,13 @@ import { RegistrationComponent } from './registration/registration.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { AddressComponent } from './address/address.component';
 import { AddTransactionComponent } from './add-transaction/add-transaction.component';
+
 import { UpdateAddressComponent } from './update-address/update-address.component';
+
+import { GetCreditcardbyidComponent } from './get-creditcardbyid/get-creditcardbyid.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
+
 
 
 
@@ -43,7 +49,14 @@ import { UpdateAddressComponent } from './update-address/update-address.componen
     TransactionComponent,
     AddressComponent,
     AddTransactionComponent,
-    UpdateAddressComponent
+
+    UpdateAddressComponent,
+
+    GetCreditcardbyidComponent,
+
+    TransactionDetailsComponent,
+    TransactionListComponent
+
   
   ],
   imports: [

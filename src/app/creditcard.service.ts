@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CreditCard } from './model/creditcard';
 
+
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,6 +23,9 @@ export class CreditcardService {
     return this.http.post(`${this.baseUrl}`, creditcard);
   }
 
-  
+  deleteCreditCard(creditcard:CreditCard): Observable<any>{
+    return this.http.delete(`${this.baseUrl}`);
+  }
+ 
 }
 

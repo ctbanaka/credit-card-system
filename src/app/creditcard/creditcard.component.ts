@@ -28,7 +28,7 @@ export class CreditcardComponent implements OnInit {
     .createCreditCard(this.creditcard).subscribe(data => {
       console.log(data)
       this.creditcard = new CreditCard();
-      this.gotoList();
+      this.getCreditCard();
     }, 
     error => console.log(error));
   }
@@ -38,8 +38,9 @@ export class CreditcardComponent implements OnInit {
     this.save();    
   }
 
-  gotoList() {
-    this.router.navigate(['/CreditCard']);
+
+  getCreditCard() {
+    this.router.navigate(['get-creditcard']);
   }
 }
 
