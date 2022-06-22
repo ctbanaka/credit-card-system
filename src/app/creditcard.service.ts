@@ -26,6 +26,8 @@ export class CreditcardService {
   deleteCreditCard(creditcard:CreditCard): Observable<any>{
     return this.http.delete(`${this.baseUrl}`);
   }
- 
+  getCreditCardByCardNo(creditcard:CreditCard):Observable<any>{
+    return this.http.get(`${this.baseUrl}`);
+  }
 }
 
