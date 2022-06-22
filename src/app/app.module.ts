@@ -22,6 +22,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { AddressComponent } from './address/address.component';
 import { AddTransactionComponent } from './add-transaction/add-transaction.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
 
 
 
@@ -42,7 +44,9 @@ import { AddTransactionComponent } from './add-transaction/add-transaction.compo
     RegistrationComponent,
     TransactionComponent,
     AddressComponent,
-    AddTransactionComponent
+    AddTransactionComponent,
+    TransactionDetailsComponent,
+    TransactionListComponent
   
   ],
   imports: [
