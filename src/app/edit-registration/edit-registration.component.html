@@ -1,1 +1,42 @@
 <p>edit-registration works!</p>
+<div class="form">
+    <div class="form-toggle"></div>
+    <div class="form-panel two">
+      <div class="form-header">
+        <h1>Register Account</h1>
+      </div>
+      <div class="form-content">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" formControlName="firstName" name="firstName" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" formControlName="lastName" name="lastName" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" formControlName="email" name="email" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="phoneNo">Phone Number</label>
+            <input id="phoneNo" type="tel" formControlName="phoneNo" name="phoneNo" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" formControlName="password" name="password" required="required"/>
+          </div>
+          <div class="form-group">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+    
