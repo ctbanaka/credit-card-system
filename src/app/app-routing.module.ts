@@ -16,8 +16,8 @@ import { AddressComponent } from './address/address.component';
 import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { GetCreditcardComponent } from './get-creditcard/get-creditcard.component';
-import { CreditCard } from './model/creditcard';
 import { CreditcardComponent } from './creditcard/creditcard.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 
 const routes: Routes = [
   {path: 'welcome', component:WelcomeComponent},
@@ -33,6 +33,7 @@ const routes: Routes = [
   {path:'addtransaction', component:AddTransactionComponent},
   {path:'getalladdress' , component:GetallAddressComponent},
   {path:'transaction', component:TransactionComponent},
+  {path:'transactionlist', component:TransactionDetailsComponent},
   { path: ' ',redirectTo: 'welcome',pathMatch:'full'},
   { path: '**',redirectTo: 'welcome',pathMatch:'full'},
 

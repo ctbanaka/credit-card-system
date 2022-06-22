@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Transaction } from '../model/transaction';
+import { TransactionService } from '../transaction.service';
 
 @Component({
   selector: 'app-transaction-list',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transaction-list.component.css']
 })
 export class TransactionListComponent implements OnInit {
-
-  constructor() { }
+   
+  cardNo!:number;
+  transactions!:Transaction[];
+  constructor(private transactionSrvice:TransactionService) { }
 
   ngOnInit(): void {
   }
+ 
+  transactionDetails():void{
+    this.transactionSrvice.viewTransactionsByCardNo(this.cardNo)
+    .subscribe(data=>{
+      this.transactions=data;
+      console.log(data);
+    })
+  }
 
+  onSubmit(){
+    this.transactionDetails();
+  }
 }

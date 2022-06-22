@@ -11,12 +11,15 @@ export class TransactionService {
 
   constructor(private http: HttpClient) { }
 
-  baseUrl:string='http://localhost:8484/credit-card/transaction/';
+  transactionUrl:string='http://localhost:8484/credit-card/transaction/';
 
 
 addTransaction(transaction:Transaction):Observable<any>{
-  return this.http.post<any>(this.baseUrl, transaction);
+  return this.http.post<any>(this.transactionUrl, transaction);
  }
 
+viewTransactionsByCardNo(cardNo:number):Observable<any>{
+   return this.http.get(this.transactionUrl+cardNo);
+}
  
 }

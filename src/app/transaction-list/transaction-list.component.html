@@ -1,1 +1,26 @@
-<p>transaction-list works!</p>
+<div>
+    <h3>Enter Card Number</h3>
+    <input type="number" [(ngModel)]="cardNo">
+</div>
+<button (click)="onSubmit()">submit</button>
+<table class="table"  >
+    <thead>
+        <tr >
+            <th>Card Number</th>
+            <th>Transaction Date</th>
+            <th>Description</th>
+            <th>Debited Balance</th>
+            <th>Reedim points/th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let transaction of transactions">
+            <td>{{transaction.cardNo}}</td>
+            <td>{{transaction.transactionDate}}</td>
+            <td>{{transaction.description}}</td>
+            <td>{{transaction.debitedBalance}}</td>
+            <td>{{transaction.redeemPoints}}</td>
+        </tr>
+    </tbody>
+</table>
