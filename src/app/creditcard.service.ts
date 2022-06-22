@@ -12,6 +12,7 @@ import { CreditCard } from './model/creditcard';
 })
 export class CreditcardService {
   private baseUrl = 'http://localhost:8484/credit-card/admin';
+  
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +27,7 @@ export class CreditcardService {
   deleteCreditCard(creditcard:CreditCard): Observable<any>{
     return this.http.delete(`${this.baseUrl}`);
   }
-  getCreditCardByCardNo(creditcard:CreditCard):Observable<any>{
+  getCreditCardByCardNo(cardNo:number):Observable<any>{
     return this.http.get(`${this.baseUrl}`);
   }
 }

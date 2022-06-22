@@ -25,7 +25,6 @@ import { AddTransactionComponent } from './add-transaction/add-transaction.compo
 
 import { UpdateAddressComponent } from './update-address/update-address.component';
 
-import { GetCreditcardbyidComponent } from './get-creditcardbyid/get-creditcardbyid.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 
@@ -52,7 +51,6 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
 
     UpdateAddressComponent,
 
-    GetCreditcardbyidComponent,
 
     TransactionDetailsComponent,
     TransactionListComponent
