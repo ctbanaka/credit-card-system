@@ -8,7 +8,7 @@ import { Address } from '../model/address';
   styleUrls: ['./delete-address-by-id.component.css']
 })
 export class DeleteAddressByIdComponent implements OnInit {
-     address!:Address[];
+     address!:Address;
      router: any;
 
   constructor(private addressService: AddressService) { }
