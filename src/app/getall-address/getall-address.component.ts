@@ -8,7 +8,7 @@ import { Address } from '../model/address';
   styleUrls: ['./getall-address.component.css']
 })
 export class GetallAddressComponent implements OnInit {
-
+   
    address!:Address[];
 
   constructor(private service:AddressService) { }

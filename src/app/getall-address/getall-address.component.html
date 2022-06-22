@@ -5,6 +5,8 @@
     <table class="table table-striped">
       <thead>
       <tr>
+        <th>addressId</th>
+        <th>UserId</th>
         <th>City</th>
         <th>State</th>
         <th>PinCode</th>
@@ -13,9 +15,10 @@
       </thead>
       <tbody>
       <tr *ngFor="let adrs of address">
-    
+        <td>{{adrs.addressId}}</td>
+         <td>{{adrs.userId}}</td>
         <td>{{adrs.city}}</td>
-        <td>{{adrs.state}</td>
+        <td>{{adrs.state}}</td>
         <td>{{adrs.pinCode}}</td>
      
        

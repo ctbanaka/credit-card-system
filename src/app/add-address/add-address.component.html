@@ -1,12 +1,14 @@
 <h1> Address Form</h1>
-<form>
- <div>
-    <label for="userId"> UserId</label>
-    <input type="number" id="userId" name="userID" placeholder="userId..." formControlName="userId">
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+   <div>
+  
+    <label for="userId"> UserId</label><br/>
+    <input type="number" id="userId" name="userID" placeholder="userId..." formControlName="userId"><br/>
  </div>
+<br>
     <div>
-        <label for="city"> City</label>
-        <input type="text" id="city" name="city" placeholder="City..." formControlName="city">
+        <label for="city"> City</label><br/>
+        <input type="text" id="city" name="city" placeholder="City..." formControlName="city"><br/>
         <div *ngIf="!city?.valid && (city?.dirty || city?. touched)">
             <div [hidden]="!city?.errors?.['required']">
                 City is required....!
@@ -15,8 +17,8 @@
     </div>
     <br>
     <div>
-        <label for="state"> State</label>
-        <input type="text" id="state" name="state" placeholder="State..."  formControlName="state">
+        <label for="state"> State</label><br/>
+        <input type="text" id="state" name="state" placeholder="State..."  formControlName="state" required ><br/>
        
         <div *ngIf="!state?.valid && (state?.dirty || state?.touched)">
            <div [hidden]="!state?.errors?.['required']">
@@ -26,14 +28,15 @@
     </div>
     <br>
     <div>
-        <label for="pinCode"> Pincode</label>
-        <input type="number" id="pincode" name="pinCode" formControlName="pinCode">
+        <label for="pinCode"> Pincode</label><br/>
+        <input type="number" id="pincode" name="pinCode" formControlName="pinCode"><br/>
         <div *ngIf="!pinCode?.valid && (pinCode?.dirty || pinCode?.touched)">
             <div [hidden]="!pinCode?.errors?.['required']">
                 Pincode is required...!
             </div>
         </div>
     </div>
+    <br>
     <button type="submit">Submit</button>
 </form>
 
