@@ -22,7 +22,7 @@ viewTransactionsByCardNo(cardno:number):Observable<any>{
 }
  
 viewTransactionById(id:number):Observable<any>{
-  return this.http.get(this.transactionUrl+'/card/'+id);
+  return this.http.get(this.transactionUrl+'card/'+id);
 }
 
 

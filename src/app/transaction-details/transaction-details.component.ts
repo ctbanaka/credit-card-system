@@ -19,7 +19,7 @@ export class TransactionDetailsComponent implements OnInit {
  viewTransaction():void{
   this.transactionService.viewTransactionById(this.id)
   .subscribe(data=>{
-    this.id=data;
+    this.transaction=data;
     console.log(data);
   })
  }
