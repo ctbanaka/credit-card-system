@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 import { Transaction } from './model/transaction';
 
 @Injectable({
@@ -22,4 +21,9 @@ viewTransactionsByCardNo(cardno:number):Observable<any>{
    return this.http.get(this.transactionUrl+cardno);
 }
  
+viewTransactionById(id:number):Observable<any>{
+  return this.http.get(this.transactionUrl+'/card/'+id);
+}
+
+
 }
