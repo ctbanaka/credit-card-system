@@ -27,6 +27,7 @@ export class AddAddressComponent implements OnInit {
 
   ngOnInit(): void {
     this.addressForm = new FormGroup({
+      
       userId: new FormControl('',Validators.required),
       city: new FormControl('',Validators.required),
       state: new FormControl('',Validators.required),
@@ -52,5 +53,8 @@ export class AddAddressComponent implements OnInit {
   get pinCode(){
     return this.addressForm.get('pinCode');
   }
-
+onSubmit(){
+  this.userAddress();
 }
+}
+

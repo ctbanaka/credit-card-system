@@ -15,11 +15,14 @@ export class AddressService {
   getAllAddress(): Observable<any>{
     return this.http.get<any>(this.baseUrl);
   }
-  // editAddress(): Observable<any>{
-  //   return this.http.put<any>(this.baseUrl);
-  //}
+   updateAddress(address:Address): Observable<any>{
+     return this.http.post<any>(this.baseUrl,address);
+  }
   userAddress(address:Address) : Observable<any>{
     return this.http.post<any>(this.baseUrl,address);
   }
+  // deleteAddressById(address:Address): Observable<any>{
+  //   return this.http.delete('$(this.baseUrl}');
+  // }
 }
 
