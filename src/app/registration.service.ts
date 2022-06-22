@@ -22,5 +22,8 @@ export class RegistrationService {
     return this.http.post<any>(this.baseUrl, register);
 
   }
-
+ 
+  editRegistration(register:Registration):Observable<any>{
+    return this.http.put<any>(this.baseUrl, register);
+  }
 }

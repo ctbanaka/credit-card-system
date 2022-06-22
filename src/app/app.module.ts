@@ -27,6 +27,8 @@ import { UpdateAddressComponent } from './update-address/update-address.componen
 
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import { EditRegistrationComponent } from './edit-registration/edit-registration.component';
+import { DeleteRegistrationComponent } from './delete-registration/delete-registration.component';
 
 
 
@@ -53,7 +55,9 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
 
 
     TransactionDetailsComponent,
-    TransactionListComponent
+    TransactionListComponent,
+    EditRegistrationComponent,
+    DeleteRegistrationComponent
 
   
   ],
