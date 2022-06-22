@@ -23,6 +23,8 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { AddressComponent } from './address/address.component';
 import { AddTransactionComponent } from './add-transaction/add-transaction.component';
 import { GetCreditcardbyidComponent } from './get-creditcardbyid/get-creditcardbyid.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
 
 
 
@@ -44,7 +46,10 @@ import { GetCreditcardbyidComponent } from './get-creditcardbyid/get-creditcardb
     TransactionComponent,
     AddressComponent,
     AddTransactionComponent,
-    GetCreditcardbyidComponent
+    GetCreditcardbyidComponent,
+
+    TransactionDetailsComponent,
+    TransactionListComponent
   
   ],
   imports: [
