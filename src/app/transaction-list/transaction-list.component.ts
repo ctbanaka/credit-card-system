@@ -9,7 +9,7 @@ import { TransactionService } from '../transaction.service';
 })
 export class TransactionListComponent implements OnInit {
    
-  cardNo!:number;
+  cardno!:number;
   transactions!:Transaction[];
   constructor(private transactionSrvice:TransactionService) { }
 
@@ -17,7 +17,7 @@ export class TransactionListComponent implements OnInit {
   }
  
   transactionDetails():void{
-    this.transactionSrvice.viewTransactionsByCardNo(this.cardNo)
+    this.transactionSrvice.viewTransactionsByCardNo(this.cardno)
     .subscribe(data=>{
       this.transactions=data;
       console.log(data);
