@@ -3,10 +3,16 @@
     <div class="form-toggle"></div>
     <div class="form-panel two">
       <div class="form-header">
-        <h1>Register Account</h1>
+        <h1>Update Account</h1>
       </div>
       <div class="form-content">
         <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          
+          <div class="form-group">
+            <label for="userId">User ID</label>
+            <input id="userId" type="text" formControlName="userId" name="userId" required="required"/>
+          </div>
+
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input id="firstName" type="text" formControlName="firstName" name="firstName" required="required"/>

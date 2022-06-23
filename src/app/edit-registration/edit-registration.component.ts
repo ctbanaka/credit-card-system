@@ -14,7 +14,7 @@ export class EditRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.editForm = new FormGroup({
-      userId: new FormControl(),
+      userId: new FormControl('', Validators.required),
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl('', Validators.required),
       dateOfBirth:new FormControl('',Validators.required),
