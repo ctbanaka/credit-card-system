@@ -11,7 +11,7 @@ import { CreditCard } from './model/creditcard';
   providedIn: 'root'
 })
 export class CreditcardService {
-  private baseUrl = 'http://localhost:8484/credit-card/admin';
+  private baseUrl = 'http://localhost:8484/credit-card/admin/';
   
   constructor(private http: HttpClient) { }
 

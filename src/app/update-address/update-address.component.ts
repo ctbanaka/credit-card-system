@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { AddressService } from '../address.service';
 import { Address } from '../model/address';
+import { AddressDto } from '../model/addressdto';
 
 @Component({
   selector: 'app-update-address',
@@ -11,14 +12,14 @@ import { Address } from '../model/address';
 })
 export class UpdateAddressComponent implements OnInit {
   sub!: Subscription;
-  address!: Address;
+  address!: AddressDto;
   addressForm!:FormGroup;
 constructor(private addressService:AddressService) { }
 
 ngOnInit(): void {
   this.addressForm = new FormGroup({
     addressId: new FormControl('', Validators.required),
-    userId: new FormControl('',Validators.required),
+
     city: new FormControl('',Validators.required),
     state: new FormControl('',Validators.required),
     pinCode: new FormControl('',Validators.required)
