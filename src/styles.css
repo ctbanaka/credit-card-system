@@ -9,3 +9,7 @@
     text-align: center;
     color: white;
 }
+
+body{
+    background-image: linear-gradient(to right, rgba(230, 176, 176, 0.116), rgb(251, 195, 195));
+}
