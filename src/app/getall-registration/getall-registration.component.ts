@@ -10,7 +10,7 @@ import { RegistrationService } from '../registration.service';
 })
 export class GetallRegistrationComponent implements OnInit {
 
-    registration!:Registration[];
+  registration!:Registration[];
 
   constructor(private service: RegistrationService) { }
 

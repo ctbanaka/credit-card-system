@@ -18,6 +18,7 @@ import { CreditcardComponent } from './creditcard/creditcard.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { EditRegistrationComponent } from './edit-registration/edit-registration.component';
+import { DeleteRegistrationComponent } from './delete-registration/delete-registration.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'getcreditcard',component:GetCreditcardComponent},
   {path:'registration', component:RegistrationComponent},
   {path:'getallreigistration', component:GetallRegistrationComponent},
+  {path:'deleteregister', component:DeleteRegistrationComponent},
   {path: 'editregister', component:EditRegistrationComponent},
   {path:'getcreditcard',component:GetCreditcardComponent},
   {path:'addaddress',component:AddAddressComponent},

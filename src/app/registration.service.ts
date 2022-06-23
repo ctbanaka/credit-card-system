@@ -26,4 +26,8 @@ export class RegistrationService {
   editRegistration(register:Registration):Observable<any>{
     return this.http.put<any>(this.baseUrl, register);
   }
+
+  deleteRegistration(userId:number):Observable<any>{
+    return this.http.delete(this.baseUrl+userId);
+  }
 }
