@@ -48,9 +48,9 @@
   
     <div>
         <label for="pinCode"> Pincode</label><br/>
-        <input type="number" id="pincode" name="pinCode" formControlName="pinCode"><br/>
+        <input type="number" id="pincode" name="pinCode" formControlName="pinCode"  maxlength="6"><br/>
         <div *ngIf="!pinCode?.valid && (pinCode?.dirty || pinCode?.touched)">
-            <div [hidden]="!pinCode?.errors?.['required']">
+            <div [hidden]="!pinCode?.errors?.['required']" >
                 Pincode is required...!
             </div>
         
