@@ -1,5 +1,11 @@
 
 <h1> AddressForm</h1>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success..!</strong> Address Added Successfully..
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 
 <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
   
@@ -7,7 +13,7 @@
     <label for="userId" class="control-label"> UserId</label><br/>
     <input type="number"  id="userId" name="UserId" placeholder="userId..." formControlName="userId"><br/>
     <div *ngIf="!userId?.valid && (userId?.dirty || userId?. touched)">
-        <div [hidden]="!userId?.errors?.['required']">
+        <div [hidden]="!userId?.errors?.['required']"  class="alert alert-danger" style="color: red;">
             UserID is required....!
  </div>
 </div>
@@ -15,13 +21,14 @@
 <br>
 
     <div>
+
         <label for="city"> City</label><br/>
         <input type="text" id="city" name="city" placeholder="City..." formControlName="city"><br/>
         <div *ngIf="!city?.valid && (city?.dirty || city?. touched)">
-            <div [hidden]="!city?.errors?.['required']">
+            <div [hidden]="!city?.errors?.['required']"  class="alert alert-danger" style="color: red;">
                 City is required....!
             </div>
-       
+         
         </div> 
     </div>
     <br>
@@ -31,7 +38,7 @@
         <input type="text" id="state" name="state" placeholder="State..."  formControlName="state" required ><br/>
        
         <div *ngIf="!state?.valid && (state?.dirty || state?.touched)">
-           <div [hidden]="!state?.errors?.['required']">
+           <div [hidden]="!state?.errors?.['required']"  class="alert alert-danger" style="color: red;">
             State is required....!
         </div>
         </div>
