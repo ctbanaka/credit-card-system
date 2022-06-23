@@ -12,13 +12,6 @@ export class TransactionListComponent implements OnInit {
   cardno!:number;
   transactions!:Transaction[];
   constructor(private transactionSrvice:TransactionService) { }
-<<<<<<< Updated upstream
-=======
-   
-get cardNo(){
- return this.cardno;
-}
->>>>>>> Stashed changes
 
   ngOnInit(): void {
   }
