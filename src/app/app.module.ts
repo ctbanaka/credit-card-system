@@ -29,6 +29,7 @@ import { TransactionDetailsComponent } from './transaction-details/transaction-d
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { EditRegistrationComponent } from './edit-registration/edit-registration.component';
 import { DeleteRegistrationComponent } from './delete-registration/delete-registration.component';
+import { DeleteCreditcardComponent } from './delete-creditcard/delete-creditcard.component';
 
 
 
@@ -57,7 +58,8 @@ import { DeleteRegistrationComponent } from './delete-registration/delete-regist
     TransactionDetailsComponent,
     TransactionListComponent,
     EditRegistrationComponent,
-    DeleteRegistrationComponent
+    DeleteRegistrationComponent,
+    DeleteCreditcardComponent
 
   
   ],
