@@ -44,9 +44,6 @@ export class AddAddressComponent implements OnInit {
     })
   
   }
-  get userId(){
-    return this.addressForm.get('userId');
-  }
   get city() {
     return this.addressForm.get('city');
   }

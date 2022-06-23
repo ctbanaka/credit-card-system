@@ -1,17 +1,6 @@
 <div>
-    <h4>Enter Card Number</h4>
-    <div>
-     <input type="number" [(ngModel)]="cardno">
-      <div *ngIf="!cardno?.valid&&(cardno?.dirty||cardno?.touched)">
-        
-      </div>
-    </div>
-    <div>
-     <input type="date"   [(ngModel)]="startDate">
-    </div>
-    <div>
-    <input type="date"   [(ngModel)]="endDate">
-    </div>
+    <h3>Enter Card Number</h3>
+    <input type="number" [(ngModel)]="cardno">
 </div>
 <button (click)="onSubmit()">submit</button>
 <table class="table"  >

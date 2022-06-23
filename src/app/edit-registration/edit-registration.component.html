@@ -1,3 +1,4 @@
+<p>edit-registration works!</p>
 <div class="form">
     <div class="form-toggle"></div>
     <div class="form-panel two">
@@ -8,35 +9,35 @@
         <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
           
           <div class="form-group">
-            <label for="userId">User ID</label><br>
+            <label for="userId">User ID</label>
             <input id="userId" type="text" formControlName="userId" name="userId" required="required"/>
           </div>
 
           <div class="form-group">
-            <label for="firstName">First Name</label><br>
+            <label for="firstName">First Name</label>
             <input id="firstName" type="text" formControlName="firstName" name="firstName" required="required"/>
           </div>
           <div class="form-group">
-            <label for="lastName">Last Name</label><br>
+            <label for="lastName">Last Name</label>
             <input id="lastName" type="text" formControlName="lastName" name="lastName" required="required"/>
           </div>
           <div class="form-group">
-            <label for="dateOfBirth">Date of Birth</label><br>
+            <label for="dateOfBirth">Date of Birth</label>
             <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" required="required"/>
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label><br>
+            <label for="email">Email Address</label>
             <input id="email" type="email" formControlName="email" name="email" required="required"/>
           </div>
           <div class="form-group">
-            <label for="phoneNo">Phone Number</label><br>
+            <label for="phoneNo">Phone Number</label>
             <input id="phoneNo" type="tel" formControlName="phoneNo" name="phoneNo" required="required"/>
           </div>
           <div class="form-group">
-            <label for="password">Password</label><br>
+            <label for="password">Password</label>
             <input id="password" type="password" formControlName="password" name="password" required="required"/>
           </div>
-          <div class="form-group"><br>
+          <div class="form-group">
             <button type="submit">Register</button>
           </div>
         </form>
