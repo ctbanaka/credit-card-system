@@ -31,7 +31,7 @@ export class AddAddressComponent implements OnInit {
       userId: new FormControl('',Validators.required),
       city: new FormControl('',Validators.required),
       state: new FormControl('',Validators.required),
-      pinCode: new FormControl('',Validators.required)
+      pinCode: new FormControl('',[Validators.required,Validators.maxLength(6)])
     });
   }
 
