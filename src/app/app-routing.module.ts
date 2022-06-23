@@ -19,6 +19,7 @@ import { TransactionDetailsComponent } from './transaction-details/transaction-d
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { EditRegistrationComponent } from './edit-registration/edit-registration.component';
 import { DeleteRegistrationComponent } from './delete-registration/delete-registration.component';
+import { DeleteCreditcardComponent } from './delete-creditcard/delete-creditcard.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'getallreigistration', component:GetallRegistrationComponent},
   {path:'deleteregister', component:DeleteRegistrationComponent},
+   {path:'deleteCreditCard',component:DeleteCreditcardComponent},
   {path: 'editregister', component:EditRegistrationComponent},
   {path:'getcreditcard',component:GetCreditcardComponent},
   {path:'addaddress',component:AddAddressComponent},
@@ -37,7 +39,7 @@ const routes: Routes = [
   {path:'addtransaction', component:AddTransactionComponent},
   {path:'getalladdress' , component:GetallAddressComponent},
   {path:'updateaddress', component:UpdateAddressComponent},
-  {path:'deleteaddress', component:DeleteAddressByIdComponent},
+  {path:'deleteAddressById', component:DeleteAddressByIdComponent},
   {path:'transaction', component:TransactionComponent},
   {path:'transactionid', component:TransactionDetailsComponent},
   {path:'transactionlist', component:TransactionListComponent},

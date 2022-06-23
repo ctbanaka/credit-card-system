@@ -22,7 +22,9 @@ export class CreditcardService {
   createCreditCard(creditcard: CreditCard): Observable<any> {
     return this.http.post(`${this.baseUrl}`, creditcard);
   }
- 
+  deleteCreditCard(cardNo:number):Observable<any>{
+    return this.http.delete(this.baseUrl+cardNo);
+  }
  
 }
 
