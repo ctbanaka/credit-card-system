@@ -28,12 +28,12 @@ export class AddRegistrtionComponent implements OnInit {
 
     this.registrationForm = new FormGroup({
       userId: new FormControl(),
-      firstName: new FormControl('', Validators.required),
-      lastName: new FormControl('', Validators.required),
+      firstName: new FormControl('', [Validators.required,Validators.minLength(4),Validators.maxLength(16)]),
+      lastName: new FormControl('', [Validators.required,Validators.maxLength(16)]),
       dateOfBirth:new FormControl('',Validators.required),
-      phoneNo:new FormControl('',Validators.required),
+      phoneNo:new FormControl('',[Validators.required,Validators.pattern("[0-9]{10}")]),
       email:new FormControl('',Validators.email),
-      password: new FormControl ('', Validators.required)
+      password: new FormControl ('', [Validators.required,Validators.maxLength(8),Validators.minLength(8)])
   });
 }
 
