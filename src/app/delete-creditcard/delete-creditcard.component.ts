@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./delete-creditcard.component.css']
 })
 export class DeleteCreditcardComponent implements OnInit {
-  
+  alert:boolean=false
   cardNo!:number;
   creditcard!:CreditCard;
  constructor(private service:CreditcardService) { }
@@ -28,7 +28,11 @@ deleteCreditCard(){
 
 onSubmit(){
    this.deleteCreditCard();
+   this.alert=true
+  // this.deleteCreditCard.reset({})
 }
-
+closeAlert(){
+  this.alert=false
+}
 
 }

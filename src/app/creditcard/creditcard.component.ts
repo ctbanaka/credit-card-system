@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./creditcard.component.css']
 })
 export class CreditcardComponent implements OnInit {
+  alert:boolean=false
   creditcardForm!:FormGroup;
   creditcard!: CreditCard;
   sub!: Subscription;
@@ -41,6 +42,8 @@ createCreditCard(){
   .subscribe(data =>{console.log(data);
     this.router.navigate(['welcome']);
   })
+  this.alert=true
+  this.creditcardForm.reset({})
 }
 
 
@@ -63,5 +66,9 @@ get expiryDate(){
 }
 get cardType(){
   return this.creditcardForm.get('cardType')
+}
+
+closeAlert(){
+  this.alert=false
 }
 }
