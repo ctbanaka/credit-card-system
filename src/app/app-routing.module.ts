@@ -30,7 +30,7 @@ const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'getallreigistration', component:GetallRegistrationComponent},
   {path:'deleteregister', component:DeleteRegistrationComponent},
-   {path:'deletecreditcard',component:DeleteCreditcardComponent},
+  {path:'deletecreditcard',component:DeleteCreditcardComponent},
   {path: 'editregister', component:EditRegistrationComponent},
   {path:'getcreditcard',component:GetCreditcardComponent},
   {path:'addaddress',component:AddAddressComponent},
