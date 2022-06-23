@@ -10,6 +10,8 @@ import { TransactionService } from '../transaction.service';
 export class TransactionListComponent implements OnInit {
    
   cardno!:number;
+  startDate!:Date;
+  endDate!:Date;
   transactions!:Transaction[];
   constructor(private transactionSrvice:TransactionService) { }
 

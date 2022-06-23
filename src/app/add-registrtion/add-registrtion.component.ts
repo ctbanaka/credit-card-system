@@ -45,8 +45,21 @@ userRegistration(){
     this.router.navigate(['welcome']);
   })
 }
+get firstName(){
+  return this.registrationForm.get('firstName');
+ }
 
+ get lastName(){
+  return this.registrationForm.get('lastName');
+ }
+ 
+ get phoneNo(){
+  return this.registrationForm.get('phoneNo');
+ }
 
+ get email(){
+  return this.registrationForm.get('email');
+ }
 
 
 onSubmit(){

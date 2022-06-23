@@ -1,7 +1,9 @@
 <div>
     <h3>Enter Card Number</h3>
-    <input type="number" [(ngModel)]="cardno">
+    <input type="number" [(ngModel)]="cardno" minlength="16" maxlength="16">
 </div>
+<div><input type="date" [(ngModel)]="startDate"></div>
+<div><input type="date" [(ngModel)]="endDate"></div>
 <button (click)="onSubmit()">submit</button>
 <table class="table"  >
     <thead>
