@@ -21,8 +21,12 @@ export class AddressService {
   userAddress(address:Address) : Observable<any>{
     return this.http.post<any>(this.baseUrl,address);
   }
-  // deleteAddressById(address:Address): Observable<any>{
-  //   return this.http.delete('$(this.baseUrl}');
-  // }
+  public deleteAddressById(addressById:number){
+    return this.http.delete(this.baseUrl+addressById);
+  
+
+ }
+ 
 }
+
 
