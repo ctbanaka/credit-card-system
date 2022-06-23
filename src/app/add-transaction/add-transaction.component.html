@@ -1,38 +1,43 @@
-<div class="form">
-  <div class="form-toggle"></div>
-  <div class="form-panel two">
-    <div class="form-header">
-      <h1>Perform Transaction</h1>
-    </div>
-    <div class="form-content">
-      <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="cardNo">Card Number</label>
-          <input id="cardNo" type="number" formControlName="cardNo" name="cardNo" required="required" />
+<div class="container contact">
+  <div class="row">
+    <h1>Purchase Now</h1>
+    <form class="row g-3 needs-validation" novalidate
+    [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+      <div class="col-md-9">
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="cardNo">Card Number</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="cardNo" type="number" formControlName="cardNo" name="cardNo" placeholder="Enter card number" required="required" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="description">Description(Optional)</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="description" type="text" formControlName="description" name="description" required="required" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="debitedBalance">Amount</label>
+            <div class="col-sm-10">
+              <input class="form-control" id="debitedBalance" type="number" formControlName="debitedBalance" name="debitedBalance"
+              required="required" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">PAY</button>
+
+            </div>
+          </div>
         </div>
-
-         
-
-        <div class="form-group">
-          <label for="description">Description(Optional)</label>
-          <input id="description" type="text" formControlName="description" name="description" required="required"/>
-        </div>
-
-        <div class="form-group">
-          <label for="debitedBalance">balance</label>
-          <input id="debitedBalance" type="number" formControlName="debitedBalance" name="debitedBalance" required="required"/>
-        </div>
-
-  
-
-        <div class="form-group">
-          <button type="submit">Pay</button>
-        </div>
-
-
-      </form>
-
-
-    </div>
+      </div>
+    </form>
   </div>
 </div>
+
+
+ 
