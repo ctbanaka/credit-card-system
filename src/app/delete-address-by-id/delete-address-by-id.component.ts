@@ -16,11 +16,8 @@ export class DeleteAddressByIdComponent implements OnInit {
   ngOnInit(): void {
  
   }
-
   public deleteAddressById(){
     this.addressService.deleteAddressById(this.addressId).subscribe((data)=>this.message=data);
   }
- 
-  }
- 
+ }
 

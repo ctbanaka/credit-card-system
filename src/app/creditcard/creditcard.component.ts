@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CreditcardService } from '../creditcard.service';
 import { CreditCard } from '../model/creditcard';
 import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-creditcard',
@@ -9,38 +11,64 @@ import { Router } from '@angular/router';
   styleUrls: ['./creditcard.component.css']
 })
 export class CreditcardComponent implements OnInit {
-  creditcard: CreditCard = new CreditCard();
-  submitted = false;
+  alert:boolean=false
+  creditcardForm!:FormGroup;
+  creditcard!: CreditCard;
+  sub!: Subscription;
 
-  constructor(private creditcardservice: CreditcardService,
-    private router: Router) { }
+  constructor(
+    private router: Router,
+    private creditcardservice: CreditcardService,
+    ) { }
 
-  ngOnInit() {
-  }
+  
+  
+  ngOnInit(): void {
 
-  newCreditCard(): void {
-    this.submitted = false;
-    this.creditcard = new CreditCard();
-  }
-
-  save() {
-    this.creditcardservice
-    .createCreditCard(this.creditcard).subscribe(data => {
-      console.log(data)
-      this.creditcard = new CreditCard();
-      this.getCreditCard();
-    }, 
-    error => console.log(error));
-  }
-
-  onSubmit() {
-    this.submitted = true;
-    this.save();    
-  }
-
-
-  getCreditCard() {
-    this.router.navigate(['get-creditcard']);
-  }
+    this.creditcardForm = new FormGroup({
+      userId: new FormControl(),
+      cardNo: new FormControl('', [Validators.required,Validators.minLength(4),Validators.maxLength(16)]),
+      cvv: new FormControl('', [Validators.required,Validators.maxLength(3)]),
+      expiryDate:new FormControl('',Validators.required),
+      cardType:new FormControl('',[Validators.required]),
+     
+  });
 }
 
+createCreditCard(){
+  console.log(this.creditcardForm.value);
+  this.creditcardservice.createCreditCard(this.creditcardForm.value)
+
+  .subscribe(data =>{console.log(data);
+    this.router.navigate(['welcome']);
+  })
+  this.alert=true
+  this.creditcardForm.reset({})
+}
+
+
+
+
+onSubmit(){
+   this.createCreditCard();
+}
+get userId(){
+  return this.creditcardForm.get('userId');
+}
+get cardNo(){
+  return this.creditcardForm.get('cardNo')
+}
+get cvv(){
+  return this.creditcardForm.get('cvv')
+}
+get expiryDate(){
+  return this.creditcardForm.get('expiryDate')
+}
+get cardType(){
+  return this.creditcardForm.get('cardType')
+}
+
+closeAlert(){
+  this.alert=false
+}
+}

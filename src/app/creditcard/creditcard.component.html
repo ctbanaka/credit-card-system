@@ -1,39 +1,75 @@
-<h3>Add CreditCard</h3>
-<div [hidden]="submitted" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="userId">userId</label>
-      <input type="text" class="form-control" id="userId" required [(ngModel)]="creditcard.userId" placeholder="userId..!" name="userId">
-     
+
+<div *ngIf="alert" class="alert alert-Succes alert-dismissible fade show" role="alert">
+    <strong>Succes!</strong> Card Deleted successfully.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<div class="form">
+  <div class="form-toggle"></div>
+  <div class="form-panel two">
+    <div class="form-header">
+      <h1>Add CreditCard</h1>
+    </div>
+    <div class="form-content">
+      <form [formGroup]="creditcardForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+           <label for="userId">UserId</label><br>
+           <input id="userId" type="number" formControlName="userId" name="userId" required="required"/>
+           <div *ngIf="!userId?.valid && (userId?.dirty || userId?.touched)">
+            <div [hidden]="!userId?.errors?.['required']">
+                UserId is required....!
+            </div>
+         </div>
         </div>
-
-    <div class="form-group">
-      <label for="cardNo">Card Number</label>
-      <input type="text" class="form-control" id="cardNo" required [(ngModel)]="creditcard.cardNo" placeholder="cardNo..!" name="cardNo">
-    </div>
-
-    <div class="form-group">
-      <label for="cvv">Cvv</label>
-      <input type="text" class="form-control" id="cvv" required [(ngModel)]="creditcard.cvv" placeholder="cvv..!" name="cvv">
-    </div>
-    <div class="form-group">
-        <label for="expiryDate">Expiry Date</label>
-        <input type="date" class="form-control" id="expiryDate" required [(ngModel)]="creditcard.expiryDate"  name="expiryDate">
-      </div>
-      <div class="form-group">
-        <label for="cardType">Card Type</label><br>
-        <input type="radio" value="vissa" id="cardType" required [(ngModel)]="creditcard.cardType" name="cardType" > Visa
-        <input type="radio" value="master" id="cardType"required [(ngModel)]="creditcard.cardType" name="cardType" >MasterCard
-        <input type="radio" value="rupay" id="cardType"required [(ngModel)]="creditcard.cardType" name="cardType" >Rupay
+        <div class="form-group">
+           <label for="cardNo">Card Number</label><br>
+           <input id="cardNo" type="number" formControlName="cardNo" name="cardNo" required="cardNo"/>
+           <div *ngIf="!cardNo?.valid && (cardNo?.dirty || cardNo?.touched)">
+            <div [hidden]="!cardNo?.errors?.['required']">
+               CardNo is required....!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+           <label for="cvv">Cvv</label><br>
+           <input id="cvv" type="number" formControlName="cvv" name="cvv" required="required"/>
+           <div *ngIf="!cvv?.valid && (cvv?.dirty || cvv?.touched)">
+            <div [hidden]="!cvv?.errors?.['required']">
+                UserId is required....!
+            </div>
+         </div>
+        </div>
+        <div class="form-group">
+           <label for="expiryDate">ExpiryDate</label><br>
+           <input id="expiryDate" type="date" formControlName="expiryDate" name="expiryDate" required="required"/>
+           <div *ngIf="!expiryDate?.valid && (expiryDate?.dirty || expiryDate?.touched)">
+            <div [hidden]="!expiryDate?.errors?.['required']">
+                ExpiryDate is required....!
+            </div>
+         </div>
+        </div>
+        <div class="form-group">
+           <label for="cardType">CardType</label><br>
+           <input type="radio" value="vissa" id="cardType"formControlName="cardType"  name="cardType" > Visa
+           <input type="radio" value="master" id="cardType"formControlName="cardType" name="cardType" >MasterCard
+           <input type="radio" value="rupay" id="cardType"formControlName="cardType" name="cardType" >Rupay
+           <div *ngIf="!cardType?.valid && (cardType?.dirty || cardType?.touched)">
+           <div [hidden]="!cardType?.errors?.['required']">
+              CardType is required....!
+          </div>
+       </div>
       <br><br>
-    <button type="submit" class="btn btn-success">Submit</button>
- 
-</div>
+        </div>
+        
+        <div class="form-group"><br>
+          <button type="submit">Submit</button>
+        </div>
+          
+    
+        </form>
+    </div>
 
-<div [hidden]="!submitted">
-  <h4>You submitted successfully!</h4> 
-
-</div>
 
 
 

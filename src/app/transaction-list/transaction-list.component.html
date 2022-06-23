@@ -1,7 +1,13 @@
 <div>
+   
+<div><input type="date" [(ngModel)]="startDate"></div>startDate
+<div><input type="date" [(ngModel)]="endDate"></div>endDate
+<button (click)="callFilterTrans()">submit</button>
     <h3>Enter Card Number</h3>
-    <input type="number" [(ngModel)]="cardno">
+    <input type="number" [(ngModel)]="cardno" minlength="16" maxlength="16">
 </div>
+
+
 <button (click)="onSubmit()">submit</button>
 <table class="table"  >
     <thead>
@@ -10,16 +16,16 @@
             <th>Transaction Date</th>
             <th>Description</th>
             <th>Debited Balance</th>
-            <th>Reedim points/th>
+            <th>Reedeem points</th>
             
         </tr>
     </thead>
     <tbody>
-        <tr  *ngFor="let transaction of transactions">
+        <tr  *ngFor="let transaction of filteredTransaction">
             <td>{{transaction.cardNo}}</td>
-            <td>{{transaction.transactionDate}}</td>
+            <td>{{displayDate(transaction.transactionDate)}}</td>
             <td>{{transaction.description}}</td>
-            <td>{{transaction.debitedBalance}}</td>
+            <td>{{transaction.debitedBalance | currency:'INR':'symbol'}}</td>
             <td>{{transaction.redeemPoints}}</td>
         </tr>
     </tbody>

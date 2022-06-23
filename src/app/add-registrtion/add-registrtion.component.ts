@@ -33,12 +33,10 @@ export class AddRegistrtionComponent implements OnInit {
       dateOfBirth:new FormControl('',Validators.required),
       phoneNo:new FormControl('',[Validators.required,Validators.pattern("[0-9]{10}")]),
       email:new FormControl('',Validators.email),
-      password: new FormControl ('', [Validators.required,Validators.maxLength(8),Validators.minLength(8)])
+      password: new FormControl ('', [Validators.required,Validators.minLength(8)])
   });
 }
-get firstName(){
-  return this.registrationForm.get('firstName');
-}
+
 userRegistration(){
   console.log(this.registrationForm.value);
   this.registrationService.userRegistration(this.registrationForm.value)
@@ -47,8 +45,21 @@ userRegistration(){
     this.router.navigate(['welcome']);
   })
 }
+get firstName(){
+  return this.registrationForm.get('firstName');
+ }
 
+ get lastName(){
+  return this.registrationForm.get('lastName');
+ }
+ 
+ get phoneNo(){
+  return this.registrationForm.get('phoneNo');
+ }
 
+ get email(){
+  return this.registrationForm.get('email');
+ }
 
 
 onSubmit(){
