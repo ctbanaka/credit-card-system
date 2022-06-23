@@ -34,6 +34,7 @@ import { DeleteCreditcardComponent } from './delete-creditcard/delete-creditcard
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,8 @@ import { DeleteCreditcardComponent } from './delete-creditcard/delete-creditcard
     TransactionListComponent,
     EditRegistrationComponent,
     DeleteRegistrationComponent,
-    DeleteCreditcardComponent
+    DeleteCreditcardComponent,
+
 
   
   ],
