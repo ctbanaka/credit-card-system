@@ -14,23 +14,43 @@
           <div class="form-group">
              <label for="lastName">Last Name</label><br>
              <input id="lastName" type="text" formControlName="lastName" name="lastName" required="required"/>
+             <div *ngIf="!lastName?.valid && (lastName?.dirty || lastName?. touched)">
+               <div [hidden]="!lastName?.errors?.['required']">
+                   lastName is required....!
+               </div>
+             </div>
           </div>
           <div class="form-group">
              <label for="dateOfBirth">Date of Birth</label><br>
              <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" required="required"/>
-          </div>
+            </div>
           <div class="form-group">
              <label for="email">Email Address</label><br>
              <input id="email" type="email" formControlName="email" name="email" required="required"/>
-          </div>
+             <div *ngIf="!email?.valid && (email?.dirty || email?. touched)">
+               <div [hidden]="!email?.errors?.['required']">
+                   email is required....!
+               </div>
+             </div>
+            </div>
           <div class="form-group">
              <label for="phoneNo">Phone Number</label><br>
              <input id="phoneNo" type="tel" formControlName="phoneNo" name="phoneNo" required="required"/>
-          </div>
+             <div *ngIf="!phoneNo?.valid && (phoneNo?.dirty || phoneNo?. touched)">
+               <div [hidden]="!phoneNo?.errors?.['required']">
+                   PhoneNo is required....!
+               </div>
+             </div>
+            </div>
           <div class="form-group">
              <label for="password">Password</label><br>
              <input id="password" type="password" formControlName="password" name="password" required="required"/>
-          </div>
+             <div *ngIf="!password?.valid && (password?.dirty || password?. touched)">
+               <div [hidden]="!password?.errors?.['required']">
+                   password is required....!
+               </div>
+             </div>
+            </div>
           <div class="form-group"><br>
             <button type="submit">Register</button>
           </div>
