@@ -1,8 +1,4 @@
-<div>
-  <h3>Enter Card Number</h3>
-  <input type="number" [(ngModel)]="cardno">
-</div>
-<button (click)="onSubmit()">submit</button>
+
 
 <div class="col-md-6 user-container">
 
@@ -26,8 +22,9 @@
       <td>{{cdr.cardType}}</td>
       <td>{{cdr.expiryDate}}</td>
       <td>{{cdr.cvv}}</td>
-      <td><button (click)="deleteCreditCard(creditcard)" class="btn btn-info" style="margin-left: 10px">Delete</button><br>
-          
+      <td><!--<button (click)="delete(obj.cardNo)" class="btn btn-info" style="margin-left: 10px">Delete</button><br>-->
+        <td><button class="btn btn-success" (click)="deleteCreditCard"> Delete</button>
+        </td>
       
     </tr>
     </tbody>
