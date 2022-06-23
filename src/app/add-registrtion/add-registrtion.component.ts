@@ -36,7 +36,9 @@ export class AddRegistrtionComponent implements OnInit {
       password: new FormControl ('', [Validators.required,Validators.maxLength(8),Validators.minLength(8)])
   });
 }
-
+get firstName(){
+  return this.registrationForm.get('firstName');
+}
 userRegistration(){
   console.log(this.registrationForm.value);
   this.registrationService.userRegistration(this.registrationForm.value)

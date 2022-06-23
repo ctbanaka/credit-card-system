@@ -2,12 +2,16 @@
 <h1> AddressForm</h1>
 
 <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
-   <div>
-    
-    <label for="userId"> UserId</label><br/>
-    <input type="number" id="userId" name="userID" placeholder="userId..." formControlName="userId"><br/>
+  
+    <div class="form-group" > 
+    <label for="userId" class="control-label"> UserId</label><br/>
+    <input type="number"  id="userId" name="UserId" placeholder="userId..." formControlName="userId"><br/>
+    <div *ngIf="!userId?.valid && (userId?.dirty || userId?. touched)">
+        <div [hidden]="!userId?.errors?.['required']">
+            UserID is required....!
  </div>
-
+</div>
+    </div>
 <br>
 
     <div>
