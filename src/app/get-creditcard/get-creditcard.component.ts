@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CreditcardService } from '../creditcard.service';
 import { CreditCard } from '../model/creditcard';
-import {Router} from "@angular/router";
+//import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-get-creditcard',
@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class GetCreditcardComponent implements OnInit {
   cardno!:number;
   creditcard!:CreditCard[];
-  router: any;
+
 
   constructor(private service: CreditcardService) { }
 
@@ -22,12 +22,16 @@ export class GetCreditcardComponent implements OnInit {
    
    
   }
-  deleteCreditCard() {
-    this.service.deleteCreditCard()
-      .subscribe(data => {this.creditcard=data;
-          console.log(data)});
+  //deleteCreditCard(cardNo:number) {
+    //this.service.deleteCreditCard(cardNo)
+      //.subscribe(data => {this.creditcard=data;
+         // console.log(data)});
          
   
   
-  }
+ // }
+ public deleteCreditCard(){
+  this.service.deleteCreditCard(this.cardno)
+   .subscribe((data)=>this.creditcard=data);
+ }
 }

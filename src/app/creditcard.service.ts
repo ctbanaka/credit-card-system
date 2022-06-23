@@ -13,7 +13,6 @@ import { CreditCard } from './model/creditcard';
 export class CreditcardService {
   private baseUrl = 'http://localhost:8484/credit-card/admin';
   
-
   constructor(private http: HttpClient) { }
 
   getCreditCard(): Observable<any>{
@@ -23,10 +22,12 @@ export class CreditcardService {
   createCreditCard(creditcard: CreditCard): Observable<any> {
     return this.http.post(`${this.baseUrl}`, creditcard);
   }
-  deleteCreditCard(): Observable<any>{
-    return this.http.delete<any>(this.baseUrl);
+  //deleteCreditCard(cardNo:number): Observable<any>{
+   // return this.http.delete<any>(this.baseUrl);
+ // }
+  public deleteCreditCard(cardNo:number){
+    return this.deleteCreditCard("http://localhost:8484/credit-card/admin"+cardNo)
   }
-  
  
 }
 
