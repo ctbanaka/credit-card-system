@@ -22,16 +22,5 @@ export class GetCreditcardComponent implements OnInit {
    
    
   }
-  //deleteCreditCard(cardNo:number) {
-    //this.service.deleteCreditCard(cardNo)
-      //.subscribe(data => {this.creditcard=data;
-         // console.log(data)});
-         
   
-  
- // }
- public deleteCreditCard(){
-  this.service.deleteCreditCard(this.cardno)
-   .subscribe((data)=>this.creditcard=data);
- }
 }
