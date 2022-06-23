@@ -43,7 +43,6 @@ const routes: Routes = [
   {path:'transaction', component:TransactionComponent},
   {path:'transactionid', component:TransactionDetailsComponent},
   {path:'transactionlist', component:TransactionListComponent},
-  {path:'addregistration',component:AddRegistrtionComponent},
   { path: ' ',redirectTo: 'welcome',pathMatch:'full'},
   { path: '**',redirectTo: 'welcome',pathMatch:'full'},
   
