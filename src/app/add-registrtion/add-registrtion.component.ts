@@ -60,6 +60,14 @@ get firstName(){
  get email(){
   return this.registrationForm.get('email');
  }
+ get dateOfBirth(){
+  return this.registrationForm.get('dateOfBirth');
+ }
+
+ get password(){
+  return this.registrationForm.get('password');
+ }
+
 
 
 onSubmit(){
