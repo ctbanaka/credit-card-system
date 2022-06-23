@@ -1,14 +1,9 @@
-<form>
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
     <div>
   
         <label for="addressId"> AddressId</label><br/>
-        <input type="number" id="addressId" name="addressID" placeholder="addressId..." formControlName="userId"><br/>
+        <input type="number" id="addressId" name="addressId" placeholder="addressId..." formControlName="addressId"><br/>
      </div>
-    <div>
-        <br>
-<label for="userId"> UserId</label><br/>
-<input type="text" id="userId" name="userID" placeholder="userId..." formControlName="userId"><br/>
-</div>
 <br>
 <div>
     <label for="city"> City</label><br/>
