@@ -33,7 +33,7 @@ export class AddRegistrtionComponent implements OnInit {
       dateOfBirth:new FormControl('',Validators.required),
       phoneNo:new FormControl('',[Validators.required,Validators.pattern("[0-9]{10}")]),
       email:new FormControl('',Validators.email),
-      password: new FormControl ('', [Validators.required,Validators.maxLength(8),Validators.minLength(8)])
+      password: new FormControl ('', [Validators.required,Validators.minLength(8)])
   });
 }
 

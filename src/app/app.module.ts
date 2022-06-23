@@ -30,6 +30,7 @@ import { TransactionListComponent } from './transaction-list/transaction-list.co
 import { EditRegistrationComponent } from './edit-registration/edit-registration.component';
 import { DeleteRegistrationComponent } from './delete-registration/delete-registration.component';
 import { DeleteCreditcardComponent } from './delete-creditcard/delete-creditcard.component';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -74,7 +75,7 @@ import { DeleteCreditcardComponent } from './delete-creditcard/delete-creditcard
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
