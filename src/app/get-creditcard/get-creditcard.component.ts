@@ -24,3 +24,4 @@ export class GetCreditcardComponent implements OnInit {
   }
   
 }
+
