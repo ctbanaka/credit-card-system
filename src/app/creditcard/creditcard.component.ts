@@ -27,7 +27,7 @@ export class CreditcardComponent implements OnInit {
 
     this.creditcardForm = new FormGroup({
       userId: new FormControl(),
-      cardNo: new FormControl('', [Validators.required,Validators.minLength(4),Validators.maxLength(16)]),
+      cardNo: new FormControl('', [Validators.required,Validators.minLength(16),Validators.maxLength(16)]),
       cvv: new FormControl('', [Validators.required,Validators.maxLength(3)]),
       expiryDate:new FormControl('',Validators.required),
       cardType:new FormControl('',[Validators.required]),
