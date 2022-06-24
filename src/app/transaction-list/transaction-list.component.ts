@@ -26,7 +26,7 @@ export class TransactionListComponent implements OnInit {
     .subscribe(data=>{
       this.transactions=data;
       this.filteredTransaction=data;
-      console.log(data);
+    
     })
   }
 

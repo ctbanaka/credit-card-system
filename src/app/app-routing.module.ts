@@ -38,7 +38,6 @@ const routes: Routes = [
   {path: 'register', component:AddRegistrtionComponent},
   {path:'addtransaction', component:AddTransactionComponent},
   {path:'getalladdress' , component:GetallAddressComponent},
-  
   {path:'updateaddress', component:UpdateAddressComponent},
   {path:'deleteAddressById', component:DeleteAddressByIdComponent},
   {path:'transaction', component:TransactionComponent},

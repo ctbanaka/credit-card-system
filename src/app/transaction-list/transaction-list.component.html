@@ -1,10 +1,10 @@
-<div>
-
-    <div>Start Date<input type="date" [(ngModel)]="startDate"></div>
-    <div>End Date<input type="date" [(ngModel)]="endDate"></div>
+<div class="show">
+    <h4>Enter Card Number</h4>
+    <input type="number" [(ngModel)]="cardno" minlength="16" maxlength="16" placeholder="Enter card number">
+    <div><b>Start Date</b><input type="date" [(ngModel)]="startDate"></div>
+    <div><b>End Date</b><input type="date" [(ngModel)]="endDate"></div>
     <button (click)="callFilterTrans()">apply</button>
-    <h3>Enter Card Number</h3>
-    <input type="number" [(ngModel)]="cardno" minlength="16" maxlength="16">
+   
 </div>
 <button (click)="onSubmit()">view</button>
 <table class="table">
