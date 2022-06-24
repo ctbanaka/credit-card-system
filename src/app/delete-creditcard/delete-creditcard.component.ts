@@ -26,7 +26,8 @@ deleteCreditCard(){
 
 onSubmit(){
    this.deleteCreditCard();
-   this.alert=true
+
+  // this.alert=true
   // this.deleteCreditCard.reset({})
 }
 closeAlert(){

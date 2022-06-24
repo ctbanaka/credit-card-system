@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CreditcardService } from '../creditcard.service';
 import { CreditCard } from '../model/creditcard';
+import { DatePipe } from '@angular/common';
+
 //import {Router} from "@angular/router";
 
 @Component({
@@ -9,6 +11,7 @@ import { CreditCard } from '../model/creditcard';
   styleUrls: ['./get-creditcard.component.css']
 })
 export class GetCreditcardComponent implements OnInit {
+  
   cardno!:number;
   creditcard!:CreditCard[];
 
@@ -22,6 +25,8 @@ export class GetCreditcardComponent implements OnInit {
    
    
   }
-  
+  // displayDate(date:Date):any{
+  //   return this.datepipe.transform(date,'dd-MM-yyyy')
+  // }
 }
 

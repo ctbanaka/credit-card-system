@@ -19,7 +19,7 @@
      <td>{{cdr.userId}}</td>
       <td>{{cdr.cardNo}}</td>
       <td>{{cdr.cardType}}</td>
-      <td>{{cdr.expiryDate}}</td>
+      <td>{{cdr.expiryDate | date:"dd-MM-yyy"}}</td>
       <td>{{cdr.cvv}}</td>
       <td> <a routerLink="/deletecreditcard" ><button >Delete</button> </a> </td>
      </tr>
