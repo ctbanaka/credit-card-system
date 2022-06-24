@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ApiResponse } from '../model/api.response';
 import { Registration } from '../model/registration';
 import { RegistrationService } from '../registration.service';
 
@@ -16,6 +17,7 @@ export class AddRegistrtionComponent implements OnInit {
   registrationForm!:FormGroup;
   register!: Registration;
   sub!: Subscription;
+  apiResponse!:ApiResponse;
 
   constructor(
     private router: Router,
@@ -41,8 +43,8 @@ userRegistration(){
   console.log(this.registrationForm.value);
   this.registrationService.userRegistration(this.registrationForm.value)
 
-  .subscribe(data =>{console.log(data);
-    this.router.navigate(['welcome']);
+  .subscribe(data =>{
+    this.apiResponse=data;
   })
 }
 get firstName(){
