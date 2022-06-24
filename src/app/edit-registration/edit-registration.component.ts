@@ -24,6 +24,31 @@ export class EditRegistrationComponent implements OnInit {
   });
 
   }
+  get userId(){
+    return this.editForm.get('userId');
+   }
+  get firstName(){
+    return this.editForm.get('firstName');
+   }
+  
+   get lastName(){
+    return this.editForm.get('lastName');
+   }
+   
+   get phoneNo(){
+    return this.editForm.get('phoneNo');
+   }
+  
+   get email(){
+    return this.editForm.get('email');
+   }
+   get dateOfBirth(){
+    return this.editForm.get('dateOfBirth');
+   }
+  
+   get password(){
+    return this.editForm.get('password');
+   }
  
   editRegistration():void{
     this.service.editRegistration(this.editForm.value)

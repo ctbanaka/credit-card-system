@@ -1,48 +1,122 @@
-<p>edit-registration works!</p>
-<div class="form">
-    <div class="form-toggle"></div>
-    <div class="form-panel two">
-      <div class="form-header">
-        <h1>Update Account</h1>
-      </div>
-      <div class="form-content">
-        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
-          
-          <div class="form-group">
-            <label for="userId">User ID</label>
-            <input id="userId" type="text" formControlName="userId" name="userId" required="required"/>
-          </div>
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Edit Account</h2>
 
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input id="firstName" type="text" formControlName="firstName" name="firstName" required="required"/>
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input id="lastName" type="text" formControlName="lastName" name="lastName" required="required"/>
-          </div>
-          <div class="form-group">
-            <label for="dateOfBirth">Date of Birth</label>
-            <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" required="required"/>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" formControlName="email" name="email" required="required"/>
-          </div>
-          <div class="form-group">
-            <label for="phoneNo">Phone Number</label>
-            <input id="phoneNo" type="tel" formControlName="phoneNo" name="phoneNo" required="required"/>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input id="password" type="password" formControlName="password" name="password" required="required"/>
-          </div>
-          <div class="form-group">
-            <button type="submit">Register</button>
-          </div>
-        </form>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+      <label for="userId">User Id:</label>
+      <input type="number" formControlName="userId" placeholder="userId" name="userId" class="form-control"
+        id="userId">
+      <div *ngIf="!userId?.valid&&(userId?.dirty||userId?.touched)">
+        <div [hidden]="!userId?.errors?.['required']" style="color: red;">
+          Enter userId*
+        </div>
       </div>
     </div>
-  </div>
- 
-    
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" formControlName="firstName" placeholder="Name" name="firstName" class="form-control"
+        id="firstName">
+      <div *ngIf="!firstName?.valid&&(firstName?.dirty||firstName?.touched)">
+        <div [hidden]="!firstName?.errors?.['required']" style="color: red;">
+          Enter your Name*
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" formControlName="lastName" placeholder="lastname" name="lastName" class="form-control"
+        id="lastName">
+      <div *ngIf="!lastName?.valid&&(lastName?.dirty||lastName?.touched)">
+        <div [hidden]="!lastName?.errors?.['required']" style="color: red;">
+          enter last name*
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth</label><br>
+      <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" class="form-control"
+        required="required" />
+      <div *ngIf="!dateOfBirth?.valid&&(dateOfBirth?.dirty|| dateOfBirth?.touched)">
+        <div [hidden]="! dateOfBirth?.errors?.['required']" style="color: red;">
+          Date of bith is required*
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label><br>
+      <input id="email" type="email" formControlName="email" name="email" class="form-control" required="required" />
+      <div *ngIf="!email?.valid&&(email?.dirty||email?.touched)">
+        <div [hidden]="!email?.errors?.['required']" class="alert alert-danger" style="color: red;">
+          Email is required..</div>
+      </div>
+      <div *ngIf="!email?.valid&&(email?.dirty||email?.touched)">
+        <div [hidden]="!email?.errors?.['email']" class="alert alert-danger" style="color: red;">
+          Email is Invalid..</div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="phoneNo">Phone Number</label><br>
+      <input id="phoneNo" type="number" formControlName="phoneNo" name="phoneNo" class="form-control" minlength="10" maxlength="10"
+        required="required" />
+      <div *ngIf="!phoneNo?.valid&&(phoneNo?.dirty|| phoneNo?.touched)">
+        <div [hidden]="! phoneNo?.errors?.['required']" style="color: red;">
+        phone number is required*
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" placeholder="password" name="password" class="form-control"
+        id="password">
+      <div *ngIf="!password?.valid&&(password?.dirty||password?.touched)">
+        <div [hidden]="!password?.errors?.['required']" style="color: red;">
+          Enter Password*
+        </div>
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- <div *ngIf="apiresponse.message!=null">
+      {{apiresponse.message}}
+    </div> -->
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -117,47 +117,4 @@
 
 
 
-<!-- <div class="form">
-    <div class="form-toggle"></div>
-    <div class="form-panel two">
-      <div class="form-header">
-        <h1>Create Account </h1>
-      </div>
-      <div class="form-content">
-        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-             <label for="firstName">First Name</label><br>
-             <input id="firstName" type="text" formControlName="firstName" name="firstName" required="required"/>
-          </div>
-          <div *ngIf="!firstName?.valid&&(firstName?.dirty||firstName?.touched)">
-            <div [hidden]="!firstName?.errors?.['required']" style="color: red;" class="alert alert-danger">
-              Firstname is required</div>
-          </div> 
-          <div class="form-group">
-             <label for="cardNumber">Last Name</label><br>
-             <input id="lastName" type="text" formControlName="lastName" name="lastName" required="required"/>
-          </div>
-          <div class="form-group">
-             <label for="dateOfBirth">Date of Birth</label><br>
-             <input id="dateOfBirth" type="date" formControlName="dateOfBirth" name="dateOfBirth" required="required"/>
-          </div>
-          <div class="form-group">
-             <label for="email">Email Address</label><br>
-             <input id="email" type="email" formControlName="email" name="email" required="required"/>
-          </div>
-          <div class="form-group">
-             <label for="phoneNo">Phone Number</label><br>
-             <input id="phoneNo" type="tel" formControlName="phoneNo" name="phoneNo" required="required"/>
-          </div>
-          <div class="form-group">
-             <label for="password">Password</label><br>
-             <input id="password" type="password" formControlName="password" name="password" required="required"/>
-          </div>
-          <div class="form-group"><br>
-            <button type="submit">Register</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
--->
+ 

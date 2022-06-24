@@ -10,6 +10,8 @@
         <th>Date Of Birth</th>
         <th>phone </th>
         <th>email</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
       </thead>
       <tbody>
@@ -20,7 +22,8 @@
         <td>{{reg.dateOfBirth}}</td>
         <td>{{reg.phoneNo}}</td>
         <td>{{reg.email}}</td>
-
+        <td><a routerLink="/editregister" ><button >Edit</button> </a> </td>
+        <td> <a routerLink="/deleteregister" ><button >Delete</button> </a> </td>
       </tr>
       </tbody>
     </table>
