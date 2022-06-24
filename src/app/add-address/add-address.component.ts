@@ -13,7 +13,8 @@ import { Address } from '../model/address';
   styleUrls: ['./add-address.component.css']
 })
 export class AddAddressComponent implements OnInit {
-    addressForm! : FormGroup;
+   alert: boolean=false
+  addressForm! : FormGroup;
     address!: Address;
     sub! :Subscription
     
@@ -35,6 +36,7 @@ export class AddAddressComponent implements OnInit {
     });
   }
 
+
   userAddress(){
     console.log(this.addressForm.value);
  this.addressService.userAddress(this.addressForm.value)
@@ -42,7 +44,14 @@ export class AddAddressComponent implements OnInit {
     .subscribe(data =>{console.log(data);
       this.router.navigate(['welcome']);
     })
-  
+  this.alert=true;
+  this.addressForm.reset({});
+  }
+  closeAlert(){
+    this.alert=false;
+  }
+  get userId(){
+    return this.addressForm.get('userId');
   }
   get city() {
     return this.addressForm.get('city');

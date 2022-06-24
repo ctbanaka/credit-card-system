@@ -1,7 +1,7 @@
 
 <div class="col-md-6 user-container">
-    <h2 style="margin: auto"> <Address></Address>Address Details</h2>
-    <!-- <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button> -->
+    <h2 style="margin: auto"> Address Details</h2>
+   
     <table class="table table-striped">
       <thead>
       <tr>
@@ -21,10 +21,14 @@
         <td>{{adrs.state}}</td>
         <td>{{adrs.pinCode}}</td>
      
-       
+
+        
+       <td><a [routerLink]="['/updateaddress']"> Edit</a>   
+          <a [routerLink]="['/deleteAddressById']"> Delete</a> 
+        </td> 
       
-        <!-- <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
-          <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td> -->
+         <!-- <td><a button class="btn btn-success" (click)="deleteAddress"> Delete</button>
+          <button class="btn btn-success" (click)="editAddress" style="margin-left: 20px;"> Edit</button></td>  -->
       </tr>
       </tbody>
     </table>

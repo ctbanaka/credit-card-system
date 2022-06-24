@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ApiResponse } from '../model/api.response';
 import { Transaction } from '../model/transaction';
 import { TransactionService } from '../transaction.service';
 
@@ -15,6 +16,7 @@ export class AddTransactionComponent implements OnInit {
   transactionForm!:FormGroup;
   transaction!:Transaction;
   sub!: Subscription;
+  apiResponse!:ApiResponse;
   
   constructor(private transactionService:TransactionService,private router: Router) { }
   
@@ -34,9 +36,8 @@ export class AddTransactionComponent implements OnInit {
   addingTransaction(){
     console.log(this.transactionForm.value);
     this.transactionService.addTransaction(this.transactionForm.value)
-
-    .subscribe(data =>{console.log(data);
-      this.router.navigate(['welcome']);
+      .subscribe(data =>{
+        this.apiResponse=data;
     })
   }
 

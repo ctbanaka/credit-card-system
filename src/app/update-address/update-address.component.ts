@@ -11,6 +11,7 @@ import { AddressDto } from '../model/addressdto';
   styleUrls: ['./update-address.component.css']
 })
 export class UpdateAddressComponent implements OnInit {
+ alert:boolean=false
   sub!: Subscription;
   address!: AddressDto;
   addressForm!:FormGroup;
@@ -24,16 +25,26 @@ ngOnInit(): void {
     state: new FormControl('',Validators.required),
     pinCode: new FormControl('',Validators.required)
   });
+
 }
 updateAddress():void{
   this.sub=this.addressService.updateAddress(this.addressForm.value).subscribe(
     data=>{this.address=data;
     console.log('ALL:',JSON.stringify(data));
-    }
-  )
-  
+    })
+
+  this.alert=true;
+  this.addressForm.reset({})
+ 
+}
+closeAlert(){
+  this.alert=false;
 }
 
+
+get addressId(){
+  return this.addressForm.get('addressId');
+}
 get city() {
   return this.addressForm.get('city');
 }

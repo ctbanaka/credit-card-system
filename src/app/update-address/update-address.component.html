@@ -1,37 +1,51 @@
+
+  <div *ngIf="alert" class="alert alert-Success alert-dismissible fade show" role="alert">
+    <strong></strong>Updated Successfully.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>  
 <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
     <div>
   
         <label for="addressId"> AddressId</label><br/>
         <input type="number" id="addressId" name="addressId" placeholder="addressId..." formControlName="addressId"><br/>
-     </div>
+       <div *ngIf="!addressId?.valid && (addressId?.dirty || addressId?. touched)">
+        <div [hidden]="!addressId?.errors?.['required']"  class="alert alert-danger" style="color: red;">
+            AddressId is required....!
+ </div>
+      </div>
+    </div>
 <br>
 <div>
     <label for="city"> City</label><br/>
     <input type="text" id="city" name="city" placeholder="City..." formControlName="city" ><br/>
-    <div *ngIf="!city?.valid && (city?.dirty || city?. touched)">
-       
+    <div *ngIf="!city?.valid && (city?.dirty || city?. touched)"  class="alert alert-danger" style="color: red;">
+        <div [hidden]="!city?.errors?.['required']"  class="alert alert-danger" style="color: red;">  
             City is required....!
         </div>
     </div> 
-
+</div>
 <br>
 <div>
     <label for="state"> State</label><br/>
     <input type="text" id="state" name="state" placeholder="State..."  formControlName="state"><br/>
-   
     <div *ngIf="!state?.valid && (state?.dirty || state?.touched)">
-     
+        <div [hidden]="!state?.errors?.['required']"  class="alert alert-danger" style="color: red;">
+          
         State is required....!
     </div>
     </div>
-
+</div>
 <br>
 <div>
+
     <label for="pinCode"> Pincode</label><br/>
-    <input type="number" id="pincode" name="pinCode" formControlName="pinCode"><br/>
+    <input type="number" id="pincode" name="pinCode" formControlName="pinCode" maxlength="6"><br/>
     <div *ngIf="!pinCode?.valid && (pinCode?.dirty || pinCode?.touched)">
-      
+        <div [hidden]="!pinCode?.errors?.['required']"  class="alert alert-danger" style="color: red;">
             Pincode is required...!
+        </div>
         </div>
     </div>
 <br>

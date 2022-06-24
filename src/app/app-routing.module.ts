@@ -38,12 +38,13 @@ const routes: Routes = [
   {path: 'register', component:AddRegistrtionComponent},
   {path:'addtransaction', component:AddTransactionComponent},
   {path:'getalladdress' , component:GetallAddressComponent},
+  
   {path:'updateaddress', component:UpdateAddressComponent},
   {path:'deleteAddressById', component:DeleteAddressByIdComponent},
   {path:'transaction', component:TransactionComponent},
   {path:'transactionid', component:TransactionDetailsComponent},
   {path:'transactionlist', component:TransactionListComponent},
-  {path:'addregistration',component:AddRegistrtionComponent},
+
   { path: ' ',redirectTo: 'welcome',pathMatch:'full'},
   { path: '**',redirectTo: 'welcome',pathMatch:'full'},
   

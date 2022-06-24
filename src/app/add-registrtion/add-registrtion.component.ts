@@ -28,12 +28,12 @@ export class AddRegistrtionComponent implements OnInit {
 
     this.registrationForm = new FormGroup({
       userId: new FormControl(),
-      firstName: new FormControl('', [Validators.required,Validators.minLength(4),Validators.maxLength(16)]),
-      lastName: new FormControl('', [Validators.required,Validators.maxLength(16)]),
+      firstName: new FormControl('', [Validators.required,Validators.minLength(4)]),
+      lastName: new FormControl('', [Validators.required]),
       dateOfBirth:new FormControl('',Validators.required),
       phoneNo:new FormControl('',[Validators.required,Validators.pattern("[0-9]{10}")]),
       email:new FormControl('',Validators.email),
-      password: new FormControl ('', [Validators.required,Validators.maxLength(8),Validators.minLength(8)])
+      password: new FormControl ('', [Validators.required,Validators.minLength(8)])
   });
 }
 
@@ -60,6 +60,14 @@ get firstName(){
  get email(){
   return this.registrationForm.get('email');
  }
+ get dateOfBirth(){
+  return this.registrationForm.get('dateOfBirth');
+ }
+
+ get password(){
+  return this.registrationForm.get('password');
+ }
+
 
 
 onSubmit(){
